@@ -1,0 +1,14 @@
+{
+    "send001":{
+        "verificationCodeType": "Login",
+        "phone":""
+    },
+    "send002":{
+        "verificationCodeType": "Login",
+        "phone":"185066613"
+    },
+    "send003":{
+        "verificationCodeType": "Login",
+        "phone":"18506826613"
+    }
+}

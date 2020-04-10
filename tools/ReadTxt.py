@@ -7,7 +7,7 @@ class ReadTxt:
         self.txtPath = os.path.join(proDir, "configurationfile\caselist.txt")
         self.caseList = []
 
-    def open_txt(self):
+    def read_txt(self):
         try:
             self.fb = open(self.txtPath)
         except Exception as ex_results:
@@ -18,7 +18,7 @@ class ReadTxt:
 
     #获取txt文件中需要执行的接口
     def get_case_list(self):
-        self.open_txt()
+        self.read_txt()
         for value in self.fb.readlines():
             data = str(value)
             if data != '' and not data.startswith("#"):
