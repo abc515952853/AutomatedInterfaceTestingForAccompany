@@ -31,17 +31,24 @@ class ReadExcl:
     def get_xls_next(self):
         self.read_excl()
         sheet = self.readfile.sheet_by_name(self.casename)
+
+        merged = self.merge_cell(sheet)  ###合并单元格
+
         row = sheet.row_values(0)
-        rowNum  = sheet.nrows
-        colNum = sheet.ncols 
+        rowNum  = sheet.nrows#获取行
+        colNum = sheet.ncols #获取列
         
         cls = []
         curRowNo = 1
         while self.hasNext(rowNum,curRowNo):
             s = {}  
-            col = sheet.row_values(curRowNo)  
+            col = sheet.row_values(curRowNo) 
             i = colNum  
             for x in range(i):
+
+                if merged.get((curRowNo,x)):###合并单元格
+                    col[x] = sheet.cell_value(*merged.get((curRowNo,x))) ###合并单元格
+
                 s[row[x]] = self.conversion_cell(sheet,curRowNo,x,col[x])
             cls.append(s)  
             curRowNo += 1
@@ -68,8 +75,24 @@ class ReadExcl:
         return no
 
 
+    #拆分合并单元格，合并单元格的第一个单元格的的映射到其他被合并的单元格中
+    def merge_cell(self,sheet):
+        mc ={}
+        if sheet.merged_cells:
+            for item in sheet.merged_cells:
+                for row in range(item[0],item[1]):
+                    for col in range(item[2],item[3]):
+                        mc.update({(row,col):(item[0],item[2])})
+        return mc
+
+
+
+
+    
+
+
 if __name__ == '__main__':
     a = ReadExcl('Send')
-    print(a.get_xls_next())
+    a.get_xls_next()
 
     

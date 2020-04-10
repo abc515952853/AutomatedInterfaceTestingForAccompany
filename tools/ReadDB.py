@@ -1,5 +1,5 @@
 import pymysql
-import ReadConfig
+from tools import ReadConfig
 import json
 import datetime
 
