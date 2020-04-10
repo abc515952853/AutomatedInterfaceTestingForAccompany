@@ -1,10 +1,6 @@
 import unittest
 import ddt
-from tools import ReadExcl
-# import ReadConfig 
-# import requests
-# import json
-# import uuid 
+from tools import ReadExcl,ReadDB
 
 case_name = "Send"
 
@@ -15,10 +11,11 @@ class Send(unittest.TestCase):
         pass
 
     @classmethod
-    def tearDownClass(self):
+    def tearDownClass(self): 
         pass
 
     def setUp(self):
+
         pass
 
     def tearDown(self):
@@ -26,10 +23,7 @@ class Send(unittest.TestCase):
 
     @ddt.data(*ReadExcl.ReadExcl(case_name).get_xls_next())
     def test_Send(self,data):
-        print('11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111')
-        a = 1
-        b = 2
-        self.assertEqual(1,1,'1234567890')
-        self.assertEqual(a,b,'1234567890')
+        print(data)
+
         
         
