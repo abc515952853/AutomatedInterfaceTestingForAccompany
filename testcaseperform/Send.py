@@ -25,8 +25,9 @@ class Send(unittest.TestCase):
 
     @ddt.data(*ReadExcl.ReadExcl(case_name).get_xls_next())
     def test_Send(self,data):
-        print(type(data))
-        print(self.url,self.version)
+        case_isperform = data['是否执行']
+        if case_isperform =='否':
+            return
 
         
         
