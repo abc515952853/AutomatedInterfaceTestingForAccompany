@@ -1,6 +1,7 @@
 import unittest
 import ddt
-from tools import ReadExcl,ReadDB,ReadConfig
+from tools import ReadConfig,ReadExcl
+from common import DisposeCase,DisposeApi,DisposeHeader
 
 case_name = "Send"
 
@@ -8,26 +9,29 @@ case_name = "Send"
 class Send(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        readconfighandle = ReadConfig.ReadConfig()
-        self.url = readconfighandle.get_data('INTERFACE','url_app')
-        self.version = readconfighandle.get_data('INTERFACE','version_num')
+        self.disposeapihandle = DisposeApi.DisposeApi()
+        self.disposeheaderhandle = DisposeHeader.DisposeHeader()
 
     @classmethod
     def tearDownClass(self): 
         pass
 
     def setUp(self):
-
         pass
 
     def tearDown(self):
         pass
 
-    @ddt.data(*ReadExcl.ReadExcl(case_name).get_xls_next())
-    def test_Send(self,data):
-        case_isperform = data['是否执行']
-        if case_isperform =='否':
-            return
+    #数据驱动执行字段'是否执行'为是的用例
+    @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
+    def test_Send(self,data): 
+        #请求接口url处理
+        url = self.disposeapihandle.get_url(data)
+        #请求接口hearder处理
+        header = self.disposeheaderhandle.get_header(data)
+        print(header)
+        # payload = 
+
 
         
         

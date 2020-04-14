@@ -2,14 +2,19 @@ import json
 import os
 
 class ReadJson:
-    def __init__(self,jsonname):
+    def __init__(self,jsonname,type='CASE'):
         self.casename = jsonname
         proDir = os.getcwd()#获取当前目录
-        self.JsonPath = os.path.join(proDir, "testcasejson\{0}.json".format(jsonname))
+        if type == 'RELYON':
+            self.JsonPath = os.path.join(proDir, "testrelyonjson\{0}.json".format(jsonname))
+        elif type == 'HEADER':
+            self.JsonPath = os.path.join(proDir, "testheaderjson\{0}.json".format(jsonname))
+        else:
+            self.JsonPath = os.path.join(proDir, "testcasejson\{0}.json".format(jsonname))
 
     def read_json(self):
         try:
-            self.fb = open(self.JsonPath)
+            self.fb = open(self.JsonPath,encoding='utf-8-sig')
         except Exception as ex_results:
             print("抓了一个异常：",ex_results)
 
@@ -20,7 +25,6 @@ class ReadJson:
     def get_json_data(self):
         self.read_json()
         self.data = json.load(self.fb)
-        print(self.data)
         self.close_json()
         return self.data
 
