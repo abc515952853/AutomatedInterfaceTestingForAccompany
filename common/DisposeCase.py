@@ -12,7 +12,7 @@ class DisposeCase:
         self.url = readconfighandle.get_data('INTERFACE','url_app')
         self.version = readconfighandle.get_data('INTERFACE','version_num')
         self.formatconversionhandle = FormatConversion.FormatConversion()
-        self.readheaderjsonhandle = ReadJson.ReadJson(casename)
+        self.readcasejsonhandle = ReadJson.ReadJson(casename)
         self.readrelyjsonhandle = ReadJson.ReadJson('RelyOn','RELYON')
 
     #剔除是否执行为否的用例
@@ -28,7 +28,7 @@ class DisposeCase:
         if case_payload == '':
             return None
 
-        case_payload = self.readheaderjsonhandle.get_parameter(case_payload)
+        case_payload = self.readcasejsonhandle.get_parameter(case_payload)
 
         case_payload_isrely = data['请求参数是否依赖']
         if case_payload_isrely == '是':

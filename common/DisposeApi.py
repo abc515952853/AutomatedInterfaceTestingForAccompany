@@ -12,7 +12,6 @@ class DisposeApi:
     #获取接口完整地址
     def get_url(self,data):
         case_api = data['请求API']
-
         case_api_isrely = data['API是否依赖']
         if case_api_isrely == '是':
             case_data = {}

@@ -2,7 +2,7 @@ import unittest
 import requests
 import ddt
 from tools import ReadConfig,ReadExcl
-from common import DisposeCase,DisposeApi,DisposeHeader,RunMain
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
 
 case_name = "Send"
 
@@ -14,6 +14,7 @@ class Send(unittest.TestCase):
         self.disposeapihandle = DisposeApi.DisposeApi()
         self.disposeheaderhandle = DisposeHeader.DisposeHeader()
         self.disposecasehandle = DisposeCase.DisposeCase(case_name)
+        self.disposereporthandle = DisposeReport.DisposeReport(case_name)
 
     @classmethod
     def tearDownClass(self): 
@@ -40,12 +41,14 @@ class Send(unittest.TestCase):
         method = data['请求类型']
         #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
+        #获取预期结果数据
+        expectedreport = self.disposereporthandle.get_report(data)
         #断言
         if r.status_code == 200:
             pass
         else:
             pass
-        self.assertEqual(r.status_code,data['预期结果'],'我是测试结果的说明，想在测试报告中查看')
+        self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
 
 
 

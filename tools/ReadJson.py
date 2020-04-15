@@ -9,6 +9,8 @@ class ReadJson:
             self.JsonPath = os.path.join(proDir, "testrelyonjson\{0}.json".format(jsonname))
         elif type == 'HEADER':
             self.JsonPath = os.path.join(proDir, "testheaderjson\{0}.json".format(jsonname))
+        elif type == 'REPORT':
+            self.JsonPath = os.path.join(proDir, "testreportjson\{0}.json".format(jsonname))
         else:
             self.JsonPath = os.path.join(proDir, "testcasejson\{0}.json".format(jsonname))
 

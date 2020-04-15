@@ -1,0 +1,11 @@
+{
+    "case_send_001":{
+        "status_code":500
+    },
+    "case_send_002":{
+        "status_code":200
+    },
+    "case_send_003":{
+        "status_code":200
+    }
+}
