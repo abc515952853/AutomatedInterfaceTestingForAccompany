@@ -1,0 +1,15 @@
+{
+    "access_token": "hKt-eMV1FpVfe_G6gjNmXySF4OXTU51sZO1U6AflrWQ",
+    "expires_in": 2592000,
+    "token_type": "Bearer",
+    "refresh_token": "Pe9k25FZWp3DINPJFMe3j1w0TJxVcgtMUfH9cA3XoeQ",
+    "scope": "accompanying.api activity.api center.api doctor.api finance.api notice.api offline_access openid ordering.api patient.api product.api profile publics.api role topic.api user.api",
+    "certificate_state": 0,
+    "user_grade": 0,
+    "rcode": "231268",
+    "name": "陪伴1050",
+    "diseases": "",
+    "is_agent": False,
+    "is_salesman": False,
+    "one_plus_one_state": False
+}

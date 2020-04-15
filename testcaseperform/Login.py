@@ -29,8 +29,7 @@ class Login(unittest.TestCase):
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
     def test_Login(self,data):
         #测试报告用于说明
-        print("用例编号为："+data['用例号'])
-        print("用例名称为"+data['用例名称'])
+        print("用例编号为："+data['用例号']+",用例名称为"+data['用例名称'])
         #请求接口url处理
         url = self.disposeapihandle.get_url(data)
         #请求接口hearder处理
@@ -39,13 +38,11 @@ class Login(unittest.TestCase):
         payload = self.disposecasehandle.get_payload(data)
         #获取请求类型
         method = data['请求类型']
-
         #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
-
         #断言
         if r.status_code == 200:
-            pass
+            print(r.json())
         else:
             pass
         self.assertEqual(r.status_code,data['预期结果'],'我是测试结果的说明，想在测试报告中查看')
