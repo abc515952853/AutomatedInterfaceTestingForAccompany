@@ -1,4 +1,7 @@
 {
+    "header_0":{
+        "Content-Type": "application/json"
+    },
     "header_1":{
         "Content-Type":"application/json",
         "Authorization":"Bearer RavJaZz4ZRuOamzreUAJ1daFRj_L8DUo_a-U2VaPt6k"

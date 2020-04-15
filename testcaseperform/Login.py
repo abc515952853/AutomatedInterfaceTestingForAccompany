@@ -4,10 +4,10 @@ import ddt
 from tools import ReadConfig,ReadExcl
 from common import DisposeCase,DisposeApi,DisposeHeader,RunMain
 
-case_name = "Send"
+case_name = "Login"
 
 @ddt.ddt
-class Send(unittest.TestCase):
+class Login(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -27,7 +27,7 @@ class Send(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_Send(self,data):
+    def test_Login(self,data):
         #测试报告用于说明
         print("用例编号为："+data['用例号'])
         print("用例名称为"+data['用例名称'])

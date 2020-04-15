@@ -1,0 +1,9 @@
+{
+    "user_6":{
+            "client_id":"app",
+            "grant_type":"phone_number_token",
+            "client_secret":"2e410faa120546b1922d36379bde2c8d",
+            "phone_number":"11400000000",
+            "verification_token":"320098"
+    }
+}
