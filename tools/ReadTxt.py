@@ -1,15 +1,17 @@
 import sys
 import os
+from common import IsSkip
 
 class ReadTxt:
-    def __init__(self):
+    def __init__(self,filename):
         proDir = os.getcwd()#获取当前目录
-        self.txtPath = os.path.join(proDir, "configurationfile\caselist.txt")
+        self.txtPath = os.path.join(proDir, "configurationfile\{0}.txt".format(filename))
         self.caseList = []
 
     def read_txt(self):
         try:
             self.fb = open(self.txtPath)
+            IsSkip.IsSkip().write_isskip('Yes')
         except Exception as ex_results:
             print("抓了一个异常：",ex_results)
     
@@ -26,7 +28,12 @@ class ReadTxt:
         self.close_txt()
         return self.caseList
 
+    #获取txt文件中需要清除数据库数据语句
+    def get_clear_data(self):
+        self.read_txt()
+        return self.fb.readlines()
 
-if __name__ == "__main__":
-    a = ReadTxt()
-    a.get_case_list()
+
+# if __name__ == "__main__":
+#     a = ReadTxt()
+#     a.get_case_list()

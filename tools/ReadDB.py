@@ -59,13 +59,15 @@ class ReadDB:
 
 
 	#增加/修改/删除一条数据
-    def modify_data(self,sql):
-        self.read_db()
+    def modify_data(self,sqlarr):
+        self.read_db() 
         try:
-            self.cur.execute(sql)
+            for sql in sqlarr:
+                print('正在执行语句：'+ sql)
+                self.cur.execute(sql)  
             self.conn.commit()
         except Exception as ex_results:
-            self.conn.Rollback()
+            self.conn.rollback()
             print("抓了一个异常：",ex_results)
         finally:
             self.close_db()
@@ -74,10 +76,10 @@ class ReadDB:
 
 
 
-if __name__ == "__main__":
-    a = ReadDB()
-    sql = "delete from test where name ='wangdachuizi '"
-    a.modify_data(sql)
+# if __name__ == "__main__":
+#     a = ReadDB()
+#     sql = "delete from test where name ='wangdachuizi '"
+#     a.modify_data(sql)
 
 
         

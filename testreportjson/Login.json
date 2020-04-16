@@ -4,7 +4,7 @@
         "expected":{
             "keyword":"case_login_006.phone_number",
             "type":"ONE",
-            "sql":"select a.CertificateState as certificate_state ,a.UserGrade as user_grade,a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='11400000000'"
+            "sql":"select a.CertificateState as certificate_state ,a.UserGrade as user_grade,a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
         }
     },
     "case_login_001":{

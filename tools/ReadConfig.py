@@ -43,6 +43,12 @@ class ReadConfig:
         value = self.cf.get(sessionname,optionname)
         return value
 
+    ##重设ini信息
+    def set_data(self,sessionname,optionname,value):
+        self.read_config()
+        self.cf.set(sessionname,optionname,value)
+        self.cf.write(open(self.configPath, "w",encoding='utf-8-sig'))
+
 if __name__ == "__main__":
     a = ReadConfig()
     print(a.get_data('EAMAIL','email_recipientaddrs'))
