@@ -19,7 +19,7 @@ class DisposeRely:
                 reportdatavalue = self.formatconversionhandle.FormatConversion(fromdata[i],r.json())
 
                 #重新赋值relyjson
-                jsonrelydata = self.formatconversionhandle.get_rely_json(reportdatavalue,todata[i])
+                jsonrelydata = self.get_rely_json(reportdatavalue,todata[i])
 
                 # #将值存入依赖json
                 # self.formatconversionhandle

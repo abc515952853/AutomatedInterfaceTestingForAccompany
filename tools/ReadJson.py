@@ -19,7 +19,7 @@ class ReadJson:
             self.fb = open(self.JsonPath,encoding='utf-8-sig')
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
 
     def close_json(self):
         self.fb.close()

@@ -63,7 +63,7 @@ class Common(unittest.TestCase):
                     print("用例编号："+data['用例号']+",用例名称:"+data['用例名称']+',执行失败')
             except Exception as ex_results:
                 print("程序终止,抓了一个异常：",ex_results,)
-                #os._exit(0)
+                os._exit(0)
 
 
 
