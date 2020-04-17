@@ -23,7 +23,8 @@ class ReadConfig:
             self.cf = configparser.ConfigParser()
             self.cf.read(self.configPath,encoding='utf-8-sig')
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
     
     #获取ini所有session
     def get_sections(self):
@@ -48,8 +49,3 @@ class ReadConfig:
         self.read_config()
         self.cf.set(sessionname,optionname,value)
         self.cf.write(open(self.configPath, "w",encoding='utf-8-sig'))
-
-if __name__ == "__main__":
-    a = ReadConfig()
-    print(a.get_data('EAMAIL','email_recipientaddrs'))
-    # print(a.read_config())

@@ -21,7 +21,6 @@ class Smtp:
         
 
     def add_accessory(self,accessoryfile):
-        print(accessoryfile)
         part = MIMEApplication(open(accessoryfile,'rb').read())
         part.add_header('Content-Disposition', 'attachment', filename=accessoryfile.split('\\')[-1])#参数为路径，文件名截取路径\后字段
         self.msg.attach(part)
@@ -36,7 +35,8 @@ class Smtp:
             smtp.sendmail(self.msg['from'], self.msg['to'], str(self.msg))
             print("邮件发送成功！")
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
         finally:
             smtp.quit()
 

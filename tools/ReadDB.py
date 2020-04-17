@@ -2,6 +2,7 @@ import pymysql
 from tools import ReadConfig
 import json
 import datetime
+import os
 
 
 class ReadDB:
@@ -25,7 +26,8 @@ class ReadDB:
             )
             self.cur = self.conn.cursor(cursor = pymysql.cursors.DictCursor)#数据和字段名称一起带回
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
     
     def close_db(self):
         self.conn.close()
@@ -39,7 +41,8 @@ class ReadDB:
             # result = json.dumps(result,ensure_ascii=False)   
             return result
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
         finally:
             self.close_db()
 
@@ -53,7 +56,8 @@ class ReadDB:
             # result = json.dumps(result,ensure_ascii=False) 
             return result
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
         finally:
             self.close_db()
 
@@ -68,7 +72,8 @@ class ReadDB:
             self.conn.commit()
         except Exception as ex_results:
             self.conn.rollback()
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
         finally:
             self.close_db()
 

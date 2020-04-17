@@ -14,7 +14,7 @@ class RunMethod:
 				res = requests.post(url=url,data=json.dumps(data))
 			return res
 		except Exception as ex_results:
-			print("抓了一个异常：",ex_results)
+			print("程序终止,抓了一个异常：",ex_results,)
 
 	def get_main(self,url,data=None,header=None):
 		res = None
@@ -25,7 +25,7 @@ class RunMethod:
 				res = requests.get(url=url,data=json.dumps(data),verify=False)
 			return res
 		except Exception as ex_results:
-			print("抓了一个异常：",ex_results)
+			print("程序终止,抓了一个异常：",ex_results,)
 
 	def run_main(self,url,method,header=None,data=None):
 		res = None

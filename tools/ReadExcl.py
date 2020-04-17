@@ -15,14 +15,16 @@ class ReadExcl:
         try:
             self.readfile = xlrd.open_workbook(self.ExclPath,'w',formatting_info= True)
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
 
     def write_excl(self):
         self.read_excl()
         try:
             self.newfile = copy(self.readfile)
         except Exception as ex_results:
-            print("抓了一个异常：",ex_results)
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
 
     def save_excl(self):
         self.newfile.save(self.ExclPath)
