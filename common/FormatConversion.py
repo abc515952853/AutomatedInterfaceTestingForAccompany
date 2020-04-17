@@ -7,4 +7,9 @@ class FormatConversion:
                 data = jsondata[relyeddata[i]]
             else:
                 data = data[relyeddata[i]]
-        return  data        
+        return  data
+
+    #字符串A.B转换成A[B]并重新赋值的json返回
+    def  FormatSet(self,reportdatavalue,todata,relyjson):
+        print(reportdatavalue,todata,relyjson)
+        return 0

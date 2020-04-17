@@ -40,7 +40,8 @@ class DisposeReport:
         elif case_report['expected']['type'] == 'ALL':
             dbdata = self.readdbhandle.search_all(sql)
         #合并返回值字典和数据库的值 返回用例
-        reportdatamerged ={}
-        reportdatamerged = dict(expecteddata)
-        reportdatamerged.update(dbdata)
+        if dbdata is not None:
+            reportdatamerged ={}
+            reportdatamerged = dict(expecteddata)
+            reportdatamerged.update(dbdata)
         return reportdatamerged

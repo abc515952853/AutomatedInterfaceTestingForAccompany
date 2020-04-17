@@ -2,7 +2,8 @@ import unittest
 import requests
 import ddt
 from tools import ReadConfig,ReadExcl,ReadDB,ReadTxt
-from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,DisposeRely,RunMain
+import os
 
 case_name = "Common"
 
@@ -15,6 +16,7 @@ class Common(unittest.TestCase):
         self.disposeheaderhandle = DisposeHeader.DisposeHeader()
         self.disposecasehandle = DisposeCase.DisposeCase(case_name)
         self.disposereporthandle = DisposeReport.DisposeReport(case_name)
+        self.disposerelyhandle = DisposeRely.DisposeRely()
         self.readdbhandle = ReadDB.ReadDB()
         self.readtxthandle = ReadTxt.ReadTxt('cleardata')
 
@@ -53,12 +55,15 @@ class Common(unittest.TestCase):
             #请求接口
             r = self.runmethodhandle.run_main(url,method,header,payload)
             #断言
-            if r.status_code == 200:
-                pass
-                print("用例编号："+data['用例号']+",用例名称:"+data['用例名称']+',执行成功')
-            else:
-                pass
-                print("用例编号："+data['用例号']+",用例名称:"+data['用例名称']+',执行失败')
+            try:
+                if r.status_code == 200:
+                    #保存依赖数据
+                    self.disposerelyhandle.set_rely(data,r)
+                else:
+                    print("用例编号："+data['用例号']+",用例名称:"+data['用例名称']+',执行失败')
+            except Exception as ex_results:
+                print("程序终止,抓了一个异常：",ex_results,)
+                #os._exit(0)
 
 
 

@@ -32,5 +32,5 @@ class DisposeHeader:
     #获取依赖json值
     def get_rely_json(self,case_api_relyed):
         jsondata = self.readrelyjsonhandle.get_json_data()
-        jsonrelydata  = self.formatconversionhandle.FormatConversion(case_api_relyed,jsondata)
+        jsonrelydata  = self.formatconversionhandle.FormatSet(case_api_relyed,jsondata)
         return jsonrelydata
