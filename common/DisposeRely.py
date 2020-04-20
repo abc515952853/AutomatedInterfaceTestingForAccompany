@@ -14,19 +14,15 @@ class DisposeRely:
             fromdata = data['存入字段'].split(',')
             todata = data['保存字段'].split(',')
 
+            jsondata = self.readrelyjsonhandle.get_json_data()
             for i in range(len(fromdata)):
                 #从返回json数据中获取存入字段的值
                 reportdatavalue = self.formatconversionhandle.FormatConversion(fromdata[i],r.json())
-
                 #重新赋值relyjson
-                jsonrelydata = self.get_rely_json(reportdatavalue,todata[i])
+                self.formatconversionhandle.FormatSet(reportdatavalue,todata[i],jsondata)
+
+            print(jsondata)
 
                 # #将值存入依赖json
                 # self.formatconversionhandle
-
-
-    def get_rely_json(self,reportdatavalue,todata):
-        jsondata = self.readrelyjsonhandle.get_json_data()
-        jsonrelydata  = self.formatconversionhandle.FormatSet(reportdatavalue,todata,jsondata)
-        return jsonrelydata
 
