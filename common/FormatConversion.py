@@ -11,11 +11,13 @@ class FormatConversion:
 
     #字符串A.B转换成A[B]并重新赋值的json返回
     def  FormatSet(self,reportdatavalue,todata,relyjson):
-        # print(reportdatavalue,todata,relyjson,'111111111111')
         parts = todata.split('.')
         par = relyjson
         key = parts.pop(0)
-        while parts:
-            par = par.setdefault(key,{})
-            key = parts.pop(0)
-            par[key]  = reportdatavalue
+        if parts:
+            while parts:
+                par = par.setdefault(key,{})
+                key = parts.pop(0)
+                # par[key]  = reportdatavalue
+
+        par[key]  = reportdatavalue

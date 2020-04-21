@@ -1,11 +1,6 @@
-{
-    "a":{
-        "b":{
-            "c":"11111"
-        }
-    },
-    "b":"22222",
-    "user_2":{
-        "Authorization":"qzpN9SZ385TrdyDzkf-HSTWM_rzvbMuA8k7SuNaZldM"
+﻿{
+    "user_3": {
+        "Authorization": "CXg66pu4DjdZ_CSiEt42Hg8jOr_LVNadNIhDJs4Ftms",
+        "token_type": "Bearer"
     }
 }

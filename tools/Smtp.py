@@ -36,7 +36,7 @@ class Smtp:
             print("邮件发送成功！")
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            os._exit(0)
+            #os._exit(0)
         finally:
             smtp.quit()
 
