@@ -24,7 +24,7 @@ class ReadConfig:
             self.cf.read(self.configPath,encoding='utf-8-sig')
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
     
     #获取ini所有session
     def get_sections(self):

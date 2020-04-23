@@ -27,7 +27,7 @@ class ReadDB:
             self.cur = self.conn.cursor(cursor = pymysql.cursors.DictCursor)#数据和字段名称一起带回
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
     
     def close_db(self):
         self.conn.close()
@@ -42,7 +42,7 @@ class ReadDB:
             return result
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
         finally:
             self.close_db()
 
@@ -57,7 +57,7 @@ class ReadDB:
             return result
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
         finally:
             self.close_db()
 
@@ -73,7 +73,7 @@ class ReadDB:
         except Exception as ex_results:
             self.conn.rollback()
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
         finally:
             self.close_db()
 

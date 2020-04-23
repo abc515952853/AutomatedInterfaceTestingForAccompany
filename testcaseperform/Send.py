@@ -3,6 +3,7 @@ import requests
 import ddt
 from tools import ReadConfig,ReadExcl
 from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
+import os
 
 case_name = "Send"
 
@@ -30,7 +31,7 @@ class Send(unittest.TestCase):
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
     def test_Send(self,data):
         #测试报告用于说明
-        print("用例编号:"+data['用例号']+",用例名称:"+data['用例名称'])
+        print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #请求接口url处理
         url = self.disposeapihandle.get_url(data)
         #请求接口hearder处理
@@ -44,11 +45,16 @@ class Send(unittest.TestCase):
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
-        if r.status_code == 200:
-            pass
-        else:
-            pass
-        self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
+        try:
+            if r.status_code == 200:
+                pass
+            else:
+                pass
+            self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
+        except Exception as ex_results:
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
+        
 
 
 

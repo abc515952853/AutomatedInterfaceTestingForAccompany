@@ -3,14 +3,17 @@ from common import FormatConversion
 
 class DisposeApi:
     def __init__(self):
-        readconfighandle = ReadConfig.ReadConfig()
-        self.url = readconfighandle.get_data('INTERFACE','url_app')
-        self.version = readconfighandle.get_data('INTERFACE','version_num')
+        self.readconfighandle = ReadConfig.ReadConfig()
+        self.version = self.readconfighandle.get_data('INTERFACE','version_num')
         self.formatconversionhandle = FormatConversion.FormatConversion()
         self.readjsonhandle = ReadJson.ReadJson('RelyOn','RELYON')
 
     #获取接口完整地址
     def get_url(self,data):
+        if data['模块'] == 'system':
+            url = self.readconfighandle.get_data('INTERFACE','url_system')
+        else:
+            url = self.readconfighandle.get_data('INTERFACE','url_app')
         case_api = data['请求API']
         case_api_isrely = data['API是否依赖']
         if case_api_isrely == '是':
@@ -19,9 +22,9 @@ class DisposeApi:
             case_api_relyed = data['API被依赖字段'].split(',')
             for i in range(len(case_api_rely)):
                 case_data[case_api_rely[i]] = self.get_rely_json(case_api_relyed[i])
-            case_url = self.url + case_api.format(version = self.version,**case_data)
+            case_url = url + case_api.format(version = self.version,**case_data)
         else:
-            case_url = self.url + case_api.format(version = self.version)
+            case_url = url + case_api.format(version = self.version)
         return case_url
 
     #获取依赖json值

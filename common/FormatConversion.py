@@ -20,4 +20,7 @@ class FormatConversion:
                 key = parts.pop(0)
                 # par[key]  = reportdatavalue
 
-        par[key]  = reportdatavalue
+        if key == 'Authorization':
+            par[key] = 'Bearer '+ reportdatavalue
+        else:
+            par[key]  = reportdatavalue

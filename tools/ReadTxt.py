@@ -14,7 +14,7 @@ class ReadTxt:
             IsSkip.IsSkip().write_isskip('Yes')
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
-            #os._exit(0)
+            os._exit(0)
     
     def close_txt(self):
         self.fb.close()

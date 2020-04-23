@@ -19,10 +19,30 @@ class RunMethod:
 	def get_main(self,url,data=None,header=None):
 		res = None
 		try:
-			if header !=None:	
-				res = requests.get(url=url,data=json.dumps(data),headers=header,verify=False)
+			if header !=None:
+				if data != None:
+					res = requests.get(url=url,data=json.dumps(data),headers=header)
+				else:
+					res = requests.get(url=url,headers=header)
 			else:
-				res = requests.get(url=url,data=json.dumps(data),verify=False)
+				if data != None:
+					res = requests.get(url=url,data=json.dumps(data))
+				else:
+					res = requests.get(url=url)
+			return res
+		except Exception as ex_results:
+			print("程序终止,抓了一个异常：",ex_results,)
+			
+	def put_main(self,url,data,header=None):
+		res = None
+		try:
+			if header !=None:
+				if header['Content-Type'] =='application/x-www-form-urlencoded':
+					res = requests.put(url=url,data=data,headers=header)
+				else:
+					res = requests.put(url=url,data=json.dumps(data),headers=header)
+			else:
+				res = requests.put(url=url,data=json.dumps(data))
 			return res
 		except Exception as ex_results:
 			print("程序终止,抓了一个异常：",ex_results,)
@@ -31,8 +51,10 @@ class RunMethod:
 		res = None
 		if method == 'POST':	
 			res = self.post_main(url,data,header)
-		else:
+		elif method == 'GET':
 			res = self.get_main(url,data,header)
+		elif method == 'PUT':
+			res = self.put_main(url,data,header)
 		return res
 
     

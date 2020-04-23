@@ -7,6 +7,7 @@ class DisposeHeader:
         readconfighandle = ReadConfig.ReadConfig()
         self.url = readconfighandle.get_data('INTERFACE','url_app')
         self.version = readconfighandle.get_data('INTERFACE','version_num')
+        self.systemtoken = readconfighandle.get_data('INTERFACE','system_token')
         self.formatconversionhandle = FormatConversion.FormatConversion()
         self.readheaderjsonhandle = ReadJson.ReadJson('Header','HEADER')
         self.readrelyjsonhandle = ReadJson.ReadJson('RelyOn','RELYON')
@@ -18,6 +19,10 @@ class DisposeHeader:
             return None
 
         case_header = self.readheaderjsonhandle.get_parameter(case_header)
+        if data['模块'] == 'system':
+            case_header['Authorization'] = self.systemtoken
+            return case_header
+
         if "Authorization" not in case_header:
             return case_header
         
@@ -32,5 +37,5 @@ class DisposeHeader:
     #获取依赖json值
     def get_rely_json(self,case_api_relyed):
         jsondata = self.readrelyjsonhandle.get_json_data()
-        jsonrelydata  = self.formatconversionhandle.FormatSet(case_api_relyed,jsondata)
+        jsonrelydata  = self.formatconversionhandle.FormatConversion(case_api_relyed,jsondata)
         return jsonrelydata
