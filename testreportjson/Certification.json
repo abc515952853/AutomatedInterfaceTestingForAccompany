@@ -7,5 +7,26 @@
     },
     "case_certification_003":{
         "status_code":200
+    },
+    "case_certification_004":{
+        "status_code":200
+    },
+    "case_certification_005":{
+        "status_code":200
+    },
+    "case_certification_006":{
+        "status_code":200
+    },
+    "case_certification_007":{
+        "status_code":400,
+        "error": "您的认证正在审核中,请勿重复提交"
+    },
+    "case_certification_008":{
+        "status_code":400,
+        "error": "您的认证正在审核中,请勿重复提交"
+    },
+    "case_certification_009":{
+        "status_code":400,
+        "error": "您的认证正在审核中,请勿重复提交"
     }
 }

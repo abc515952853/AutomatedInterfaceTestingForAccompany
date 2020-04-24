@@ -45,15 +45,11 @@ class Send(unittest.TestCase):
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
-        try:
-            if r.status_code == 200:
-                pass
-            else:
-                pass
-            self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
-        except Exception as ex_results:
-            print("程序终止,抓了一个异常：",ex_results,)
-            os._exit(0)
+        if r.status_code == 200:
+            pass
+        else:
+            pass
+        self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
         
 
 

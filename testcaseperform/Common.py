@@ -22,9 +22,9 @@ class Common(unittest.TestCase):
 
 
         #清除测试数据
-        sql = self.readtxthandle.get_clear_data()
+        # sql = self.readtxthandle.get_clear_data()
         print('-------------------开始清除原测试数据-------------------')
-        self.readdbhandle.modify_data(sql)
+        # self.readdbhandle.modify_data(sql)
         print('-------------------结束清除原测试数据-------------------')
         print('--------------------开始创建测试数据--------------------')
 
@@ -56,16 +56,14 @@ class Common(unittest.TestCase):
             #请求接口
             r = self.runmethodhandle.run_main(url,method,header,payload)
             #断言
-            try:
-                if r.status_code == 200:
-                    #保存依赖数据
-                    self.disposerelyhandle.set_rely(data,r)
-                    pass
-                else:
-                    print(r.status_code,r.text)
-            except Exception as ex_results:
-                print("程序终止,抓了一个异常：",ex_results,)
+            if r.status_code == 200:
+                #保存依赖数据
+                self.disposerelyhandle.set_rely(data,r)
+                pass
+            else:
+                print(r.status_code,r.text)
                 os._exit(0)
+
 
 
 
