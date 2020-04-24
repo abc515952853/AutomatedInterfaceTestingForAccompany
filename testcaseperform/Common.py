@@ -45,6 +45,12 @@ class Common(unittest.TestCase):
         case = DisposeCase.DisposeCase(case_name).get_case_data()
         for data in case:
             print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
+            #处理sql语句
+            if data['模块'] == 'sql':
+                sqlarr = []
+                sqlarr.append(data['请求API'])
+                self.readdbhandle.modify_data(sqlarr)
+                continue
             #请求接口url处理
             url = self.disposeapihandle.get_url(data)
             #请求接口hearder处理

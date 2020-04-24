@@ -191,6 +191,68 @@
         "isPassed": true,
         "diseases": "骨癌",
         "remark": "111"
+    },
+    "case_common_023":{
+        "avatar": "accompanying/doctor/photo/fcc2f5013be04bacbfb357ff14e8ff4a.jpg",
+        "departmentId": 1,
+        "departmentName": "营养科",
+        "expertise": "膀胱腺癌",
+        "hospitalId": 1,
+        "hospitalName":"北京大学肿瘤医院",
+        "isPreengage": true,
+        "isRecommend": true,
+        "name": "签015",
+        "title": "主任医师",
+        "type": "1",
+        "vitae": "我是一个医生的个人简介",
+        "phone":"11400010015",
+        "position":"中西医结合"
+    },
+    "case_common_024":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010015",
+        "verification_token":"320098"
+    },
+    "case_common_025":{
+        "name": "推广员16",
+        "phone": "11400010016",
+        "password": "11400010016",
+        "username": "11400010016",
+        "attribute":"1"
+    },
+    "case_common_026":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010016",
+        "verification_token":"320098"
+    },
+    "case_common_027":{
+        "phone": "11400010017",
+        "petName": "代17",
+        "userGrade": 0,
+        "referrerPhone":"13000000000"
+    },
+    "case_common_028":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010017",
+        "verification_token":"320098"
+    },
+    "case_common_029":{
+        "idCardPhotoAfter": "test/certificate/15800020003/1575341699140dd32a940f.jpg", 
+        "idCardNumber": "330102198909283016", 
+        "name": "代理17", 
+        "idCardPhotoBefore": "test/certificate/15800020003/1575341699140dd32a940f.jpg"
+    },
+    "case_common_030":{
+        "agenterApplyId": 1,
+        "applyState": "审核通过",
+        "remarks": "我是一个备注",
+        "auditor":"admin"
     }
 
 }
