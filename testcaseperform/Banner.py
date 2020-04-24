@@ -5,10 +5,10 @@ from tools import ReadConfig,ReadExcl
 from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
 import os
 
-case_name = "Home"
+case_name = "Banner"
 
 @ddt.ddt
-class Home(unittest.TestCase):
+class Banner(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -29,7 +29,7 @@ class Home(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_Home(self,data):
+    def test_Banner(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #请求接口url处理
