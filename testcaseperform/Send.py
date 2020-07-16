@@ -45,9 +45,13 @@ class Send(unittest.TestCase):
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
-        self.assertEqual(r.status_code,expectedreport['status_code'])
-        if r.status_code == 200:
-            self.assertTrue(r.json()['verify_token'])
+        try: 
+            self.assertEqual(r.status_code,expectedreport['status_code'])
+            if r.status_code == 200:
+                self.assertTrue(r.json()['verify_token'])
+        except AssertionError as e:
+            print(e)
+            raise
 
         
         
