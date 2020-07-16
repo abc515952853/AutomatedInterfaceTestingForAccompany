@@ -10,5 +10,9 @@
     "case_send_003":{
         "verificationCodeType": "Login",
         "phone":"11400000000"
+    },
+    "case_send_004":{
+        "verificationCodeType": "Withdraw",
+        "phone":"11400010017"
     }
 }

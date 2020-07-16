@@ -7,5 +7,8 @@
     },
     "case_send_003":{
         "status_code":200
+    },
+    "case_send_004":{
+        "status_code":200
     }
 }

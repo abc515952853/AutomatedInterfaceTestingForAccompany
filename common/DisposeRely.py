@@ -22,7 +22,7 @@ class DisposeRely:
                     reportdatavalue = self.formatconversionhandle.FormatConversion(fromdata[i],r.json())
                     #重新赋值relyjson
                     self.formatconversionhandle.FormatSet(reportdatavalue,todata[i],jsondata)
-            elif data['存入sql'] != '':
+            if data['存入sql'] != '':
                 dbdata = self.readdbhandle.search_one(data['存入sql'])
                 todata = data['保存sql值'].split(',')
                 for i in range(len(todata)):

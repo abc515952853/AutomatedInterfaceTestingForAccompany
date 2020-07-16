@@ -45,11 +45,11 @@ class Send(unittest.TestCase):
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
+        self.assertEqual(r.status_code,expectedreport['status_code'])
         if r.status_code == 200:
-            pass
-        else:
-            pass
-        self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
+            self.assertTrue(r.json()['verify_token'])
+
+        
         
 
 
