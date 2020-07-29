@@ -38,7 +38,49 @@
         "client_id":"app",
         "grant_type":"phone_number_token",
         "client_secret":"2e410faa120546b1922d36379bde2c8d",
-        "phone_number":"11400000000",
+        "phone_number":"11400010011",
+        "verification_token":"320098"
+    },
+    "case_login_007":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010012",
+        "verification_token":"320098"
+    },
+    "case_login_008":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010013",
+        "verification_token":"320098"
+    },
+    "case_login_009":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010014",
+        "verification_token":"320098"
+    },
+    "case_login_010":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010015",
+        "verification_token":"320098"
+    },
+    "case_login_011":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010016",
+        "verification_token":"320098"
+    },
+    "case_login_012":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010017",
         "verification_token":"320098"
     }
 }

@@ -13,7 +13,7 @@ class DisposeReport:
         self.readcasejsonhandle = ReadJson.ReadJson(casename)
         self.readdbhandle = ReadDB.ReadDB()
 
-    #获取接口完整地址
+    #获取预期结果
     def get_report(self,data):
         case_report = data['预期结果']
         if case_report == '':
@@ -23,6 +23,7 @@ class DisposeReport:
         case_report = self.readreportjsonhandle.get_parameter(case_report)
         case_status_code = case_report['status_code']
         expecteddata["status_code"] = case_status_code
+
         #判断有无sql断言，如果没有则返回接口状态
         if "expected" not in case_report:
             return expecteddata
@@ -44,4 +45,10 @@ class DisposeReport:
             reportdatamerged ={}
             reportdatamerged = dict(expecteddata)
             reportdatamerged.update(dbdata)
+        
+        #获取expectedother的预期结果
+        if "expectedother" not in case_report:
+            return reportdatamerged
+        reportdatamerged.update(case_report["expectedother"])
         return reportdatamerged
+

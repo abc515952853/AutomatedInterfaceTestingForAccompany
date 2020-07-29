@@ -2,7 +2,7 @@ import unittest
 import requests
 import ddt
 from tools import ReadConfig,ReadExcl
-from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
 import os
 
 case_name = "Login"
@@ -16,6 +16,8 @@ class Login(unittest.TestCase):
         self.disposeheaderhandle = DisposeHeader.DisposeHeader()
         self.disposecasehandle = DisposeCase.DisposeCase(case_name)
         self.disposereporthandle = DisposeReport.DisposeReport(case_name)
+        self.disposerelyhandle = DisposeRely.DisposeRely()
+        self.disposeasserthandle = DisposeAssert.DisposeAssert()
 
     @classmethod
     def tearDownClass(self): 
@@ -45,11 +47,19 @@ class Login(unittest.TestCase):
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
-        if r.status_code == 200:
-            pass
-        else:
-            pass
-        self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
+        try: 
+            self.assertEqual(r.status_code,expectedreport['status_code'])
+            if r.status_code == 200:
+                #数据断言
+                self.disposeasserthandle.AssertReport(expectedreport,r.json())
+        except AssertionError as e:
+            print(e)
+            raise
+        finally:
+            #保存依赖数据
+            self.disposerelyhandle.set_rely(data,r)
+
+        
 
 
 

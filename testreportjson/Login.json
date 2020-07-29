@@ -1,12 +1,4 @@
 {
-    "case_login_006":{
-        "status_code":200,
-        "expected":{
-            "keyword":"case_login_006.phone_number",
-            "type":"ONE",
-            "sql":"select a.CertificateState as certificate_state ,a.UserGrade as user_grade,a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
-        }
-    },
     "case_login_001":{
         "status_code":400
     },
@@ -21,5 +13,110 @@
     },
     "case_login_005":{
         "status_code":400
+    },
+    "case_login_006":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_006.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":0,
+            "user_grade":0,
+            "diseases":"",
+            "is_agent":false,
+            "is_salesman":false
+        }
+    },
+    "case_login_007":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_007.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":2,
+            "user_grade":1,
+            "diseases":"骨癌",
+            "is_agent":false,
+            "is_salesman":false
+        }
+    },
+    "case_login_008":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_008.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":2,
+            "user_grade":2,
+            "diseases":"脑癌",
+            "is_agent":false,
+            "is_salesman":false
+        }
+    },
+    "case_login_009":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_009.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":2,
+            "user_grade":3,
+            "diseases":"",
+            "is_agent":false,
+            "is_salesman":false
+        }
+    },
+    "case_login_010":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_010.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":2,
+            "user_grade":4,
+            "diseases":"",
+            "is_agent":false,
+            "is_salesman":false
+        }
+    },
+    "case_login_011":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_011.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":0,
+            "user_grade":0,
+            "diseases":"",
+            "is_agent":false,
+            "is_salesman":true
+        }
+    },
+    "case_login_012":{
+        "status_code":200,
+        "expected":{
+            "keyword":"case_login_012.phone_number",
+            "type":"ONE",
+            "sql":"select a.RecommendedCode as rcode,a.PetName as name from accompanying_identity.aspnetusers a where a.PhoneNumber='{phone_number}'"
+        },
+        "expectedother":{
+            "certificate_state":0,
+            "user_grade":0,
+            "diseases":"",
+            "is_agent":true,
+            "is_salesman":true
+        }
     }
 }

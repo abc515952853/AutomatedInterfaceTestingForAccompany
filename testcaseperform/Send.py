@@ -2,7 +2,7 @@ import unittest
 import requests
 import ddt
 from tools import ReadConfig,ReadExcl
-from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
 import os
 
 case_name = "Send"
@@ -16,6 +16,8 @@ class Send(unittest.TestCase):
         self.disposeheaderhandle = DisposeHeader.DisposeHeader()
         self.disposecasehandle = DisposeCase.DisposeCase(case_name)
         self.disposereporthandle = DisposeReport.DisposeReport(case_name)
+        self.disposerelyhandle = DisposeRely.DisposeRely()
+        self.disposeasserthandle = DisposeAssert.DisposeAssert()
 
     @classmethod
     def tearDownClass(self): 
@@ -48,10 +50,16 @@ class Send(unittest.TestCase):
         try: 
             self.assertEqual(r.status_code,expectedreport['status_code'])
             if r.status_code == 200:
-                self.assertTrue(r.json()['verify_token'])
+                self.assertIsNotNone(r.json()['verify_token'])
+                #数据断言
+                self.disposeasserthandle.AssertReport(expectedreport,r.json())
         except AssertionError as e:
             print(e)
             raise
+        finally:
+            #保存依赖数据
+            self.disposerelyhandle.set_rely(data,r)
+            
 
         
         
