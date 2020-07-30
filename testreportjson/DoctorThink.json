@@ -1,11 +1,58 @@
 {
     "case_doctorthink_001":{
-        "status_code":200
+        "status_code":401,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
     },
     "case_doctorthink_002":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
     },
     "case_doctorthink_003":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
+    },
+    "case_doctorthink_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
+    },
+    "case_doctorthink_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
+    },
+    "case_doctorthink_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
+    },
+    "case_doctorthink_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
+    },
+    "case_doctorthink_008":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,title,user_id as userId, is_advisor as isAdvisor from doctor where expertise like '%膀胱腺癌%' order by create_time desc"
+        }
     }
 }

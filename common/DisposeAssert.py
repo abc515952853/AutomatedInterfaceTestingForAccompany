@@ -3,13 +3,16 @@ import types
 
 class DisposeAssert(unittest.TestCase):
     def AssertReport(self,expectedreport,apireport):
-        for c in expectedreport.keys():
-            if c =='status_code':
-                continue
-
-            default = self.dict_get(apireport,c,None)
-            self.assertIsNotNone(default)
-            self.assertEqual(expectedreport[c],default)
+        print(expectedreport)
+        print(apireport)
+        if type(expectedreport) is dict:
+            for c in expectedreport.keys():
+                default = self.dict_get(apireport,c,None)
+                self.assertIsNotNone(default)
+                self.assertEqual(expectedreport[c],default)
+        elif type(expectedreport) is list:
+            self.assertListEqual(expectedreport,apireport)
+            
 
     def dict_get(self,dict, objkey, default):
         tmp = dict

@@ -1,27 +1,58 @@
 {
     "case_banner_001":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_002":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_003":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_004":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_005":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_006":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_007":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     },
     "case_banner_008":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT banner_id as bannerId,title,link,banner_img as bannerImg,biz_data as bizData from banner order by sort asc"
+        }
     }
-
 }

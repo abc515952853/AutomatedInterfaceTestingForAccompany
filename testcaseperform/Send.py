@@ -48,11 +48,13 @@ class Send(unittest.TestCase):
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
         try: 
+            #返回状态断言
             self.assertEqual(r.status_code,expectedreport['status_code'])
             if r.status_code == 200:
                 self.assertIsNotNone(r.json()['verify_token'])
                 #数据断言
-                self.disposeasserthandle.AssertReport(expectedreport,r.json())
+                if "expecteddata" in expectedreport:
+                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],r.json())
         except AssertionError as e:
             print(e)
             raise

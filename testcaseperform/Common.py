@@ -4,6 +4,7 @@ import ddt
 from tools import ReadConfig,ReadExcl,ReadDB,ReadTxt
 from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,DisposeRely,RunMain
 import os
+import time
 
 case_name = "Common"
 
@@ -30,6 +31,7 @@ class Common(unittest.TestCase):
 
     @classmethod
     def tearDownClass(self):
+        time.sleep(5)
         print('--------------------结束创建测试数据--------------------')
         pass
 

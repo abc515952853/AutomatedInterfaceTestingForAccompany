@@ -5,10 +5,10 @@ from tools import ReadConfig,ReadExcl
 from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
 import os
 
-case_name = "Login"
+case_name = "DoctorThink"
 
 @ddt.ddt
-class Login(unittest.TestCase):
+class DoctorThink(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -31,7 +31,7 @@ class Login(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_Login(self,data):
+    def test_DoctorThink(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #请求接口url处理
@@ -60,13 +60,3 @@ class Login(unittest.TestCase):
         finally:
             #保存依赖数据
             self.disposerelyhandle.set_rely(data,r)
-
-        
-
-
-
-
-
-
-        
-        

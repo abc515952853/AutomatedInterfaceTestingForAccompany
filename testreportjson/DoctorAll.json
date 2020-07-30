@@ -1,27 +1,66 @@
 {
     "case_doctorall_001":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_002":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_003":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_004":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_005":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_006":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_007":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     },
     "case_doctorall_008":{
-        "status_code":200
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "datalist":["expertise"]
+        }
     }
-
 }

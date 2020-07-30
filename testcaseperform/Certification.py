@@ -2,7 +2,7 @@ import unittest
 import requests
 import ddt
 from tools import ReadConfig,ReadExcl
-from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
 import os
 
 case_name = "Certification"
@@ -16,6 +16,8 @@ class Certification(unittest.TestCase):
         self.disposeheaderhandle = DisposeHeader.DisposeHeader()
         self.disposecasehandle = DisposeCase.DisposeCase(case_name)
         self.disposereporthandle = DisposeReport.DisposeReport(case_name)
+        self.disposerelyhandle = DisposeRely.DisposeRely()
+        self.disposeasserthandle = DisposeAssert.DisposeAssert()
 
     @classmethod
     def tearDownClass(self): 
@@ -38,18 +40,26 @@ class Certification(unittest.TestCase):
         header = self.disposeheaderhandle.get_header(data)
         #请求接口payload处理
         payload = self.disposecasehandle.get_payload(data)
+        print(payload)
         #获取请求类型
         method = data['请求类型']
         #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
-        #断言
-        if r.status_code == 200:
-            pass
-        else:
-            pass
-        self.assertEqual(r.status_code,expectedreport['status_code'],'我是测试结果的说明，想在测试报告中查看')
+        try: 
+            #返回状态断言
+            self.assertEqual(expectedreport['status_code'],r.status_code)
+            if r.status_code == 200:
+                #数据断言
+                if "expecteddata" in expectedreport:
+                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],r.json())
+        except AssertionError as e:
+            print(e)
+            raise
+        finally:
+            #保存依赖数据
+            self.disposerelyhandle.set_rely(data,r)
 
 
 
