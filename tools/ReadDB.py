@@ -30,8 +30,17 @@ class ReadDB:
             os._exit(0)
     
     def close_db(self):
-        self.cur.close()
-        self.conn.close()
+        try:
+            if self.cur:
+                self.cur.close()
+        except Exception as ex_results:
+            print("程序终止,抓了一个异常：",ex_results,)
+        finally:
+            try:
+                if self.conn:
+                    self.conn.close()
+            except Exception as ex_results:
+                print("程序终止,抓了一个异常：",ex_results,)
 
 	#查询一条数据
     def search_one(self,sql):

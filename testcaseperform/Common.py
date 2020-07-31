@@ -35,7 +35,7 @@ class Common(unittest.TestCase):
         pass
 
     def setUp(self):
-        time.sleep(1)
+        time.sleep(2)
         pass
 
     def tearDown(self):
