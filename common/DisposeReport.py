@@ -58,5 +58,8 @@ class DisposeReport:
                 expecteddata["expecteddata"].update(case_report["expectedother"])
             else:
                 expecteddata["expecteddata"] = case_report["expectedother"]
+
+        if "asserttype" in case_report:
+            expecteddata['asserttype'] = case_report['asserttype']
         return expecteddata
 

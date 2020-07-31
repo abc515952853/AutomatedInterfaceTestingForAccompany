@@ -31,11 +31,11 @@ class Common(unittest.TestCase):
 
     @classmethod
     def tearDownClass(self):
-        time.sleep(5)
         print('--------------------结束创建测试数据--------------------')
         pass
 
     def setUp(self):
+        time.sleep(1)
         pass
 
     def tearDown(self):

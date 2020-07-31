@@ -3,7 +3,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -11,7 +11,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -19,7 +19,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -27,7 +27,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -35,7 +35,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -43,7 +43,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -51,7 +51,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     },
@@ -59,7 +59,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by create_time desc",
+            "sql":"SELECT doctor_id as doctorId,name,avatar,hospital_name as hospitalName,department_name as departmentName,title,expertise,type,vitae,position,user_id as userId from doctor order by doctor_id desc",
             "datalist":["expertise"]
         }
     }

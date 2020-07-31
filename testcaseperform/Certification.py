@@ -4,6 +4,7 @@ import ddt
 from tools import ReadConfig,ReadExcl
 from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
 import os
+import time
 
 case_name = "Certification"
 
@@ -24,6 +25,7 @@ class Certification(unittest.TestCase):
         pass
 
     def setUp(self):
+        time.sleep(1)
         pass
 
     def tearDown(self):
@@ -40,20 +42,26 @@ class Certification(unittest.TestCase):
         header = self.disposeheaderhandle.get_header(data)
         #请求接口payload处理
         payload = self.disposecasehandle.get_payload(data)
-        print(payload)
         #获取请求类型
         method = data['请求类型']
         #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
+        #断言
         try: 
             #返回状态断言
             self.assertEqual(expectedreport['status_code'],r.status_code)
             if r.status_code == 200:
                 #数据断言
                 if "expecteddata" in expectedreport:
-                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],r.json())
+                    if r.text != '':
+                        self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
+                    else:
+                        self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],payload)
+            elif r.status_code == 400:
+                if "expecteddata" in expectedreport:
+                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
         except AssertionError as e:
             print(e)
             raise

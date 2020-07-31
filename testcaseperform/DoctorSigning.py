@@ -4,6 +4,7 @@ import ddt
 from tools import ReadConfig,ReadExcl
 from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
 import os
+import time
 
 case_name = "DoctorSigning"
 
@@ -24,6 +25,7 @@ class DoctorSigning(unittest.TestCase):
         pass
 
     def setUp(self):
+        time.sleep(1)
         pass
 
     def tearDown(self):
@@ -49,11 +51,17 @@ class DoctorSigning(unittest.TestCase):
         #断言
         try: 
             #返回状态断言
-            self.assertEqual(r.status_code,expectedreport['status_code'])
+            self.assertEqual(expectedreport['status_code'],r.status_code)
             if r.status_code == 200:
                 #数据断言
                 if "expecteddata" in expectedreport:
-                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],r.json())
+                    if r.text != '':
+                        self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
+                    else:
+                        self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],payload)
+            elif r.status_code == 400:
+                if "expecteddata" in expectedreport:
+                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
         except AssertionError as e:
             print(e)
             raise

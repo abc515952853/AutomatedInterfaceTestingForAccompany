@@ -30,6 +30,7 @@ class ReadDB:
             os._exit(0)
     
     def close_db(self):
+        self.cur.close()
         self.conn.close()
 
 	#查询一条数据
@@ -38,8 +39,8 @@ class ReadDB:
         try:
             self.cur.execute(sql)
             result = self.cur.fetchone()
-            # result = json.dumps(result,ensure_ascii=False)   
-            return result
+            # result = json.dumps(result,ensure_ascii=False)
+            return eval(str(result).replace('None',"''"))
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)
@@ -53,8 +54,8 @@ class ReadDB:
         try:
             self.cur.execute(sql)
             result = self.cur.fetchall()
-            # result = json.dumps(result,ensure_ascii=False) 
-            return result
+            # result = json.dumps(result,ensure_ascii=False)
+            return eval(str(result).replace('None',"''"))
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)

@@ -1,6 +1,6 @@
 {
     "case_certification_001":{
-            "certificationType":"1",
+            "certificationType":1,
             "certificateFiles":[
                 "accompanying/certificate/18367145751/883117e78f9240f0a26894e9ac090a02.jpg",
                 "accompanying/certificate/18367145751/bd8040b9b3514a0698e0ef02fcc80f2d.jpg",
@@ -13,7 +13,7 @@
             "name":"患者001"
         },
     "case_certification_002":{
-        "certificationType":"2",
+        "certificationType":2,
         "certificateFiles":[
             "accompanying/certificate/18367145751/883117e78f9240f0a26894e9ac090a02.jpg",
             "accompanying/certificate/18367145751/bd8040b9b3514a0698e0ef02fcc80f2d.jpg",
@@ -26,9 +26,9 @@
         "name":"患者家属002"
     },
     "case_certification_003":{
-        "certificationType":"3",
+        "certificationType":3,
         "diseases":"肺癌",
-        "hospitalId":"23922",
+        "hospitalId":236416,
         "certificateFiles":[
         "accompanying/certificate/18367145751/56221c7913d445ce8b798aab14dd13a9.jpg",
         "accompanying/certificate/18367145751/81d0c9c513c544988b65ee7b6e04a689.jpg",
@@ -40,12 +40,13 @@
         "position":"中西医结合",
         "title":"主治医师",
         "avatar":"accompanying/certificate/18367145751/a271a7a1118b4656a4b3b4e54e23c091.jpg",
-        "hospital":"浙江大学第一附属医院",
+        "hospital":"浙江大学医学院附属儿童医院",
         "name":"医生003",
-        "department":"98895"
+        "departmentId":189932,
+        "departmentName":"普外科"
     },
     "case_certification_004":{
-        "certificationType":"1",
+        "certificationType":1,
         "certificateFiles":[
             "accompanying/certificate/18367145751/883117e78f9240f0a26894e9ac090a02.jpg",
             "accompanying/certificate/18367145751/bd8040b9b3514a0698e0ef02fcc80f2d.jpg",
@@ -58,7 +59,7 @@
         "name":"患者004"
     },
     "case_certification_005":{
-        "certificationType":"2",
+        "certificationType":2,
         "certificateFiles":[
             "accompanying/certificate/18367145751/883117e78f9240f0a26894e9ac090a02.jpg",
             "accompanying/certificate/18367145751/bd8040b9b3514a0698e0ef02fcc80f2d.jpg",
@@ -71,9 +72,9 @@
         "name":"患者家属005"
     },
     "case_certification_006":{
-        "certificationType":"3",
+        "certificationType":3,
         "diseases":"肺癌",
-        "hospitalId":"23922",
+        "hospitalId":23646,
         "certificateFiles":[
         "accompanying/certificate/18367145751/56221c7913d445ce8b798aab14dd13a9.jpg",
         "accompanying/certificate/18367145751/81d0c9c513c544988b65ee7b6e04a689.jpg",
@@ -85,8 +86,9 @@
         "position":"中西医结合",
         "title":"主治医师",
         "avatar":"accompanying/certificate/18367145751/a271a7a1118b4656a4b3b4e54e23c091.jpg",
-        "hospital":"浙江大学第一附属医院",
+        "hospital":"浙江大学医学院附属儿童医院",
         "name":"医生006",
-        "department":"98895"
+        "departmentId":189932,
+        "departmentName":"普外科"
     }
 }

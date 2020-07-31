@@ -81,7 +81,7 @@
     "case_common_011":{
         "certificationType":"3",
         "diseases":"肺癌",
-        "hospitalId":"23922",
+        "hospitalId":"23646",
         "certificateFiles":[
             "accompanying/certificate/18367145751/56221c7913d445ce8b798aab14dd13a9.jpg",
             "accompanying/certificate/18367145751/81d0c9c513c544988b65ee7b6e04a689.jpg",
@@ -93,9 +93,10 @@
         "position":"中西医结合",
         "title":"主治医师",
         "avatar":"accompanying/certificate/18367145751/a271a7a1118b4656a4b3b4e54e23c091.jpg",
-        "hospital":"浙江大学第一附属医院",
+        "hospital":"浙江大学医学院附属儿童医院",
         "name":"医生006",
-        "department":"98895"
+        "departmentId":"189932",
+        "departmentName":"普外科"
     },
     "case_common_012":{
         "isPassed": false,
@@ -171,7 +172,7 @@
     "case_common_021":{
         "certificationType":"3",
         "diseases":"肺癌",
-        "hospitalId":"23922",
+        "hospitalId":"23646",
         "certificateFiles":[
             "accompanying/certificate/18367145751/56221c7913d445ce8b798aab14dd13a9.jpg",
             "accompanying/certificate/18367145751/81d0c9c513c544988b65ee7b6e04a689.jpg",
@@ -183,9 +184,10 @@
         "position":"中西医结合",
         "title":"主治医师",
         "avatar":"accompanying/certificate/18367145751/a271a7a1118b4656a4b3b4e54e23c091.jpg",
-        "hospital":"浙江大学第一附属医院",
+        "hospital":"浙江大学医学院附属儿童医院",
         "name":"医生014",
-        "department":"98895"
+        "departmentId":"189932",
+        "departmentName":"普外科"
     },
     "case_common_022":{
         "isPassed": true,
