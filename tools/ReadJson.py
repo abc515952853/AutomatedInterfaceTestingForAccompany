@@ -6,13 +6,16 @@ class ReadJson:
         self.casename = jsonname
         proDir = os.getcwd()#获取当前目录
         if type == 'RELYON':
-            self.JsonPath = os.path.join(proDir, "testrelyonjson\{0}.json".format(jsonname))
+            self.JsonPath = os.path.join(proDir, "testjson\\testrelyonjson\{0}.json".format(jsonname))
         elif type == 'HEADER':
-            self.JsonPath = os.path.join(proDir, "testheaderjson\{0}.json".format(jsonname))
+            self.JsonPath = os.path.join(proDir, "testjson\\testheaderjson\{0}.json".format(jsonname))
         elif type == 'REPORT':
-            self.JsonPath = os.path.join(proDir, "testreportjson\{0}.json".format(jsonname))
-        else:
-            self.JsonPath = os.path.join(proDir, "testcasejson\{0}.json".format(jsonname))
+            self.JsonPath = os.path.join(proDir, "testjson\\testreportjson\{0}.json".format(jsonname))
+        elif type =='ENV':
+            self.JsonPath = os.path.join(proDir, "testjson\\testenvjson\{0}.json".format(jsonname))
+        else :
+            self.JsonPath = os.path.join(proDir, "testjson\\testcasejson\{0}.json".format(jsonname))
+        print(self.JsonPath)
 
     def read_json(self):
         try:
@@ -63,6 +66,6 @@ class ReadJson:
 
         
 
-if __name__ == "__main__":
-    a = ReadJson('Send')
-    a.get_parameter('send001')
+# if __name__ == "__main__":
+#     a = ReadJson('Send')
+#     a.get_parameter('send001')

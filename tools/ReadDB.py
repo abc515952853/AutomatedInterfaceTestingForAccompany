@@ -14,6 +14,7 @@ class ReadDB:
         self.db_password = configdata.get_data('DATABASE','db_password')
         self.db_dbname = configdata.get_data('DATABASE','db_dbname')
     
+    #打开数据库
     def read_db(self):
         try:
             self.conn = pymysql.connect(
@@ -29,6 +30,7 @@ class ReadDB:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)
     
+    #关闭数据库
     def close_db(self):
         try:
             if self.cur:
