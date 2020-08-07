@@ -27,16 +27,21 @@ class ReadRedis:
             os._exit(0)
     
     #删除hash数据
-    def hashdelall(self,name,valuearr):
+    def hashdelall(self,name,key):
         self.read_redis()
         try:
-            for value in valuearr:
-                self.r.hdel(name,value)
+            self.r.hdel(name,key)
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)
-        
+
+    #添加hash数据
+    def hashsetall(self,name,key,value):
+        self.read_redis()
+        try:
+            self.r.hset(name,key,str(value).replace("'",'"').replace("False","false").replace("True","true"))
+        except Exception as ex_results:
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
 
 
-
-    

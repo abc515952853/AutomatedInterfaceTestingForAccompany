@@ -13,7 +13,17 @@ class DisposeEnv:
             jsondata = self.readenvjsonhandle.get_json_data()[data['依赖数据']]
             if "redis" in jsondata:
                 for envdata in jsondata['redis']:
-                    print(envdata)
+                    if envdata['nodetype'] == 'Hash':
+                        if envdata['nodeoperation'] == 'Add':
+                            self.readredishandle.hashsetall(envdata['name'],envdata['key'],envdata['value'])
+                        elif envdata['nodeoperation'] == 'Delete':
+                            self.readredishandle.hashdelall(envdata['name'],envdata['key'])
+                    elif envdata['nodetype'] == 'String':
+                        pass
+                    elif envdata['nodetype'] == 'List':
+                        pass
+                    elif envdata['nodetype'] == 'Set':
+                        pass                                        
             if "sql" in jsondata:
                 pass
             if "api" in  jsondata:

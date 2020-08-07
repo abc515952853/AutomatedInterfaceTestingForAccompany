@@ -15,7 +15,6 @@ class ReadJson:
             self.JsonPath = os.path.join(proDir, "testjson\\testenvjson\{0}.json".format(jsonname))
         else :
             self.JsonPath = os.path.join(proDir, "testjson\\testcasejson\{0}.json".format(jsonname))
-        print(self.JsonPath)
 
     def read_json(self):
         try:
