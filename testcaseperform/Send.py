@@ -2,7 +2,7 @@ import unittest
 import requests
 import ddt
 from tools import ReadConfig,ReadExcl
-from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert,DisposeEnv
 import os
 import time
 
@@ -13,12 +13,13 @@ class Send(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
-        self.disposeapihandle = DisposeApi.DisposeApi()
+        self.disposeapihandle = DisposeApi.DisposeApi(case_name)
         self.disposeheaderhandle = DisposeHeader.DisposeHeader()
         self.disposecasehandle = DisposeCase.DisposeCase(case_name)
         self.disposereporthandle = DisposeReport.DisposeReport(case_name)
         self.disposerelyhandle = DisposeRely.DisposeRely()
         self.disposeasserthandle = DisposeAssert.DisposeAssert()
+        self.disposeenvhandle = DisposeEnv.DisposeEnv()
 
     @classmethod
     def tearDownClass(self): 
@@ -36,6 +37,8 @@ class Send(unittest.TestCase):
     def test_Send(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
+        #测试环境处理
+        self.disposeenvhandle.set_env(data)
         #请求接口url处理
         url = self.disposeapihandle.get_url(data)
         #请求接口hearder处理

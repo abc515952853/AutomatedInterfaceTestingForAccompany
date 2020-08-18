@@ -2,11 +2,12 @@ from tools import ReadConfig,ReadJson
 from common import FormatConversion
 
 class DisposeApi:
-    def __init__(self):
+    def __init__(self,casename = None):
         self.readconfighandle = ReadConfig.ReadConfig()
         self.version = self.readconfighandle.get_data('INTERFACE','version_num')
         self.formatconversionhandle = FormatConversion.FormatConversion()
-        self.readjsonhandle = ReadJson.ReadJson('RelyOn','RELYON')
+        self.readrelyjsonhandle = ReadJson.ReadJson('RelyOn','RELYON')
+        self.readcasejsonhandle = ReadJson.ReadJson(casename,'CASE')
 
     #获取接口完整地址
     def get_url(self,data):
@@ -21,7 +22,10 @@ class DisposeApi:
             case_api_rely= data['API依赖字段'].split(',')
             case_api_relyed = data['API被依赖字段'].split(',')
             for i in range(len(case_api_rely)):
-                case_data[case_api_rely[i]] = self.get_rely_json(case_api_relyed[i])
+                if "case_" in case_api_relyed[i]:
+                    case_data[case_api_rely[i]] = self.get_case_json(case_api_relyed[i])
+                elif "rely_" in case_api_relyed[i]:
+                    case_data[case_api_rely[i]] = self.get_rely_json(case_api_relyed[i])
             case_url = url + case_api.format(version = self.version,**case_data)
         else:
             case_url = url + case_api.format(version = self.version)
@@ -29,8 +33,15 @@ class DisposeApi:
 
     #获取依赖json值
     def get_rely_json(self,case_api_relyed):
-        jsondata = self.readjsonhandle.get_json_data()
+        jsondata = self.readrelyjsonhandle.get_json_data()
         jsonrelydata  = self.formatconversionhandle.FormatConversion(case_api_relyed,jsondata)
         return jsonrelydata
+
+    #获取用例json值
+    def get_case_json(self,case_api_relyed):
+        jsondata = self.readcasejsonhandle.get_json_data()
+        jsonrelydata  = self.formatconversionhandle.FormatConversion(case_api_relyed,jsondata)
+        return jsonrelydata
+        
 
         

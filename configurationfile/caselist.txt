@@ -3,7 +3,8 @@
 #Login
 #Home
 #Banner
-Version
+#Version
+VersionCheck
 #DoctorAll
 #DoctorSigning
 #DoctorThink

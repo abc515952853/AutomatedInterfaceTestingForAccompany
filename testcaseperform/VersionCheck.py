@@ -6,10 +6,10 @@ from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,Di
 import os
 import time
 
-case_name = "Version"
+case_name = "VersionCheck"
 
 @ddt.ddt
-class Version(unittest.TestCase):
+class VersionCheck(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -34,7 +34,7 @@ class Version(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_Version(self,data):
+    def test_VersionCheck(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #测试环境处理
@@ -47,7 +47,7 @@ class Version(unittest.TestCase):
         payload = self.disposecasehandle.get_payload(data)
         #获取请求类型
         method = data['请求类型']
-        # #请求接口
+        # # #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)

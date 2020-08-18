@@ -1,0 +1,30 @@
+{
+    "case_versioncheck_001": {
+        "status_code": 200,
+        "expectedother": {
+            "isLatest": true,
+            "uptUrl": ""
+        }
+    },
+    "case_versioncheck_002": {
+        "status_code": 200,
+        "expectedother": {
+            "isLatest": true,
+            "uptUrl": ""
+        }
+    },
+    "case_versioncheck_003": {
+        "status_code": 200,
+        "expectedother": {
+            "isLatest": false,
+            "uptUrl": "https://apps.apple.com/cn/app/id1458601909"
+        }
+    },
+    "case_versioncheck_004": {
+        "status_code": 200,
+        "expectedother": {
+            "isLatest": false,
+            "uptUrl": "https://i.peiban85.com/accompanying/default/apk/accompany-100.apk"
+        }
+    }
+}

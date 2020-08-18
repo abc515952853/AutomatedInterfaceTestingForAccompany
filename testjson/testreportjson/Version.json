@@ -1,0 +1,110 @@
+{
+    "case_version_001":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "",
+            "strategy": 0,
+            "uptUrl": "",
+            "content": ""
+        }
+    },
+    "case_version_002":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "",
+            "strategy": 0,
+            "uptUrl": "",
+            "content": ""
+        }
+    },
+    "case_version_003":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "",
+            "strategy": 0,
+            "uptUrl": "",
+            "content": ""
+        }
+    },
+    "case_version_004":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "",
+            "strategy": 0,
+            "uptUrl": "",
+            "content": ""
+        }
+    },
+    "case_version_005":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "",
+            "strategy": 0,
+            "uptUrl": "",
+            "content": ""
+        }
+    },
+    "case_version_006":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "",
+            "strategy": 0,
+            "uptUrl": "",
+            "content": ""
+        }
+    },
+    "case_version_007":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "4.0.1",
+            "strategy": 0,
+            "uptUrl": "https://apps.apple.com/cn/app/id1458601909",
+            "content": "医陪伴V4.0.1更新：\n优化交互，修复已知问题。"
+        }
+    },
+    "case_version_008":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "4.0.1", 
+            "strategy": 0,
+            "uptUrl": "https://i.peiban85.com/accompanying/default/apk/accompany-100.apk",
+            "content": "医陪伴V4.0.1更新：\n优化交互，修复已知问题。"
+        }
+    },
+    "case_version_009":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "4.0.1",
+            "strategy": 1,
+            "uptUrl": "https://apps.apple.com/cn/app/id1458601909",
+            "content": "医陪伴V4.0.1更新：\n优化交互，修复已知问题。"
+        }
+    },
+    "case_version_010":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "4.0.1", 
+            "strategy": 1,
+            "uptUrl": "https://i.peiban85.com/accompanying/default/apk/accompany-100.apk",
+            "content": "医陪伴V4.0.1更新：\n优化交互，修复已知问题。"
+        }
+    },
+    "case_version_011":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "4.0.1",
+            "strategy": 2,
+            "uptUrl": "https://apps.apple.com/cn/app/id1458601909",
+            "content": "医陪伴V4.0.1更新：\n优化交互，修复已知问题。"
+        }
+    },
+    "case_version_012":{
+        "status_code":200,
+        "expectedother":{
+            "appVer": "4.0.1", 
+            "strategy": 2,
+            "uptUrl": "https://i.peiban85.com/accompanying/default/apk/accompany-100.apk",
+            "content": "医陪伴V4.0.1更新：\n优化交互，修复已知问题。"
+        }
+    }
+}

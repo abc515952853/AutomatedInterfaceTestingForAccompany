@@ -1,0 +1,18 @@
+{
+    "case_versioncheck_001":{
+        "token": "b32b3a72b3f74b9da8ce686400b21230",
+        "platForm":"1"
+    },
+    "case_versioncheck_002":{
+        "token": "b32b3a72b3f74b9da8ce686400b21230",
+        "platForm":"2"
+    },
+    "case_versioncheck_003":{
+        "token": "723ebbf9f54348ef80260cbf698bb3d5",
+        "platForm":"1"
+    },
+    "case_versioncheck_004":{
+        "token": "723ebbf9f54348ef80260cbf698bb3d5",
+        "platForm":"2"
+    }
+}
