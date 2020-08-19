@@ -41,7 +41,6 @@ class DoctorAll(unittest.TestCase):
         self.disposeenvhandle.set_env(data)
         #请求接口url处理
         url = self.disposeapihandle.get_url(data)
-        print(url)
         #请求接口hearder处理
         header = self.disposeheaderhandle.get_header(data)
         #请求接口payload处理
