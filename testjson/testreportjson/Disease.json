@@ -1,0 +1,9 @@
+{
+    "case_disease_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease ORDER BY disease_id desc"
+        }
+    }
+}

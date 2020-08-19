@@ -50,7 +50,6 @@ class ReadDB:
         try:
             self.cur.execute(sql)
             result = self.cur.fetchone()
-            # result = json.dumps(result,ensure_ascii=False)
             return eval(str(result).replace('None',"''"))
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
@@ -65,7 +64,6 @@ class ReadDB:
         try:
             self.cur.execute(sql)
             result = self.cur.fetchall()
-            # result = json.dumps(result,ensure_ascii=False)
             return eval(str(result).replace('None',"''"))
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)

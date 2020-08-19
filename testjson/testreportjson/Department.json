@@ -1,0 +1,23 @@
+{
+    "case_department_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT department_id as departmentId,name from department where hospital_id=1 ORDER BY department_id desc LIMIT 0,20"
+        }
+    },
+    "case_department_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT department_id as departmentId,name from department where hospital_id=2 ORDER BY department_id desc LIMIT 0,20"
+        }
+    },
+    "case_department_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT department_id as departmentId,name from department where hospital_id=3 ORDER BY department_id desc LIMIT 0,20"
+        }
+    }
+}

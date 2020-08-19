@@ -1,0 +1,9 @@
+{
+    "case_doctorarea_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT distinct t.city FROM doctor t where t.doctor_id > 0 and (t.type = 1 or t.is_advisor = 1) and t.user_id is not null and t.user_id !='' and t.is_app = 1 order by t.city asc"
+        }
+    }
+}

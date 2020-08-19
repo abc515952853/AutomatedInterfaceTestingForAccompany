@@ -4,6 +4,7 @@ import types
 class DisposeAssert(unittest.TestCase):
     def AssertReport(self,expectedreport,apireport):
         print(expectedreport)
+        print('----------------------------------------------')
         print(apireport)
         if type(expectedreport) is dict:
             for c in expectedreport.keys():
@@ -12,8 +13,8 @@ class DisposeAssert(unittest.TestCase):
                 self.assertEqual(expectedreport[c],default)
         elif type(expectedreport) is list:
             self.assertListEqual(expectedreport,apireport)
-            
 
+            
     def dict_get(self,dict, objkey, default):
         tmp = dict
         for k,v in tmp.items():

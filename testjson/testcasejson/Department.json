@@ -1,0 +1,11 @@
+{
+    "case_department_001":{
+        "hospitalid": "1"
+    },
+    "case_department_002":{
+        "hospitalid": "2"
+    },
+    "case_department_003":{
+        "hospitalid": "3"
+    }
+}

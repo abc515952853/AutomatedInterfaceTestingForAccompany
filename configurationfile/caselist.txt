@@ -4,8 +4,13 @@
 #Home
 #Banner
 #Version
-VersionCheck
+#VersionCheck
+DoctorArea
 #DoctorAll
 #DoctorSigning
 #DoctorThink
+#Hospital
+#Department
+#DiseaseType
+#Disease
 #Certification

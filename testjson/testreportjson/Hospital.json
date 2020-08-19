@@ -1,0 +1,54 @@
+{
+    "case_hospital_001":{
+        "status_code":401
+    },
+    "case_hospital_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    },
+    "case_hospital_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    },
+    "case_hospital_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    },
+    "case_hospital_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    },
+    "case_hospital_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    },
+    "case_hospital_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    },
+    "case_hospital_008":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT hospital_id as hospitalId,name from hospital where state=1 ORDER BY hospital_id desc LIMIT 0,20"
+        }
+    }
+}

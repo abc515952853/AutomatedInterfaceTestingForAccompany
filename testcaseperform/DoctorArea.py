@@ -1,15 +1,15 @@
 import unittest
 import requests
 import ddt
-from tools import ReadConfig,ReadExcl
-from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert,DisposeEnv
+from tools import ReadConfig,ReadExcl,ReadRedis
+from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,DisposeRely,DisposeAssert,DisposeEnv,DisposeEnv,DisposeSpecial
 import os
 import time
 
-case_name = "DoctorAll"
+case_name = "DoctorArea"
 
 @ddt.ddt
-class DoctorAll(unittest.TestCase):
+class DoctorArea(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -21,10 +21,12 @@ class DoctorAll(unittest.TestCase):
         self.disposeasserthandle = DisposeAssert.DisposeAssert()
         self.disposeenvhandle = DisposeEnv.DisposeEnv()
 
+        self.disposespecialhandle = DisposeSpecial.DisposeSpecial()
+
     @classmethod
     def tearDownClass(self): 
         pass
-
+    
     def setUp(self):
         time.sleep(2)
         pass
@@ -34,24 +36,25 @@ class DoctorAll(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_DoctorAll(self,data):
+    def test_DoctorArea(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #测试环境处理
-        self.disposeenvhandle.set_env(data)
+        self.disposeenvhandle.set_env(data)        
         #请求接口url处理
         url = self.disposeapihandle.get_url(data)
-        print(url)
         #请求接口hearder处理
         header = self.disposeheaderhandle.get_header(data)
         #请求接口payload处理
         payload = self.disposecasehandle.get_payload(data)
         #获取请求类型
         method = data['请求类型']
-        #请求接口
+        # #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
+        #对结果特殊处理下
+        expectedreport = self.disposespecialhandle.DictToList(expectedreport)
         #断言
         try: 
             #返回状态断言
