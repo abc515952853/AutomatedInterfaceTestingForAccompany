@@ -1,0 +1,19 @@
+{
+    "case_protocolagree_001":{
+        "status_code":401
+    },
+    "case_protocolagree_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT protocol_type as protocoltype  from accompanying_identity.useragreeprotocol where user_id in (SELECT id from accompanying_identity.aspnetusers where PhoneNumber ='11400010016');"
+        }
+    },
+    "case_protocolagree_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT protocol_type as protocoltype  from accompanying_identity.useragreeprotocol where user_id in (SELECT id from accompanying_identity.aspnetusers where PhoneNumber ='11400010017');"
+        }
+    }
+}
