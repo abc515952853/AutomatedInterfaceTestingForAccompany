@@ -26,7 +26,7 @@ class Common(unittest.TestCase):
         #清除测试数据
         sql = self.readtxthandle.get_clear_data()
         print('-------------------开始清除原测试数据-------------------')
-        self.readdbhandle.modify_data(sql)
+        # self.readdbhandle.modify_data(sql)
         print('-------------------结束清除原测试数据-------------------')
         print('--------------------开始创建测试数据--------------------')
 
@@ -36,7 +36,6 @@ class Common(unittest.TestCase):
         pass
 
     def setUp(self):
-        time.sleep(2)
         pass
 
     def tearDown(self):
@@ -47,6 +46,7 @@ class Common(unittest.TestCase):
     def test_Common(self,data):
         case = DisposeCase.DisposeCase(case_name).get_case_data()
         for data in case:
+            time.sleep(2)
             print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
             #处理sql语句
             if data['模块'] == 'sql':
@@ -67,6 +67,7 @@ class Common(unittest.TestCase):
             #断言
             if r.status_code == 200:
                 #保存依赖数据
+                time.sleep(2)
                 self.disposerelyhandle.set_rely(data,r)
                 pass
             else:

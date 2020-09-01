@@ -43,6 +43,10 @@ class DisposeReport:
                     if "datalist" in case_report['expected']:
                         for dl in case_report['expected']['datalist']:
                             dbdata[dl] = dbdata[dl].split(',')
+                    if "expected2" in case_report['expected']:
+                        for ex in case_report['expected']['expected2']:
+                            if ex['type'] =='sql':
+                                dbdata[ex['key']] = self.readdbhandle.search_all(ex['value'])
             elif case_report['expected']['type'] == 'ALL':
                 dbdata = self.readdbhandle.search_all(sql)
                 if dbdata is not None:

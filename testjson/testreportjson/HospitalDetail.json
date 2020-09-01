@@ -1,0 +1,16 @@
+{
+    "case_hospitaldetail_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT hospital_id as hospitalId,name,logo,phone,tags,CONCAT(city,county,address) as address,lat,lng,'' as distance,summary,therapy,user_id as userId  from hospital  where name = '测试中医馆' and phone = '11400010000';",
+            "expected2":[
+                {
+                    "type":"sql",
+                    "key":"prescriptions",
+                    "value":"SELECT a.prescription_id as prescriptionId,a.name,a.cover,a.suitable,CAST(a.doctor_id as CHAR) as doctorId,a.doctor_name as doctorName,a.disease,a.summary from  prescription a join hospital_prescription b on a.prescription_id = b.prescription_id join hospital c on b.hospital_id = c.hospital_id where c.name = '测试中医馆' and c.phone = '11400010000'"
+                }
+            ]
+        }
+    }
+}

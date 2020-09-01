@@ -1,0 +1,65 @@
+{
+    "case_hospitalschedule_001": {
+        "status_code": 401
+    },
+    "case_hospitalschedule_002": {
+        "status_code": 200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT schedule_number as scheduleNumber from hospital_schedule where phone ='11400010022' ORDER BY create_time desc limit 0,1"
+        },
+        "expectedother":{
+            "type": 4,
+            "errMsg":"",
+            "scheduleId":""
+        }
+    },
+    "case_hospitalschedule_003": {
+        "status_code": 200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT hospital_schedule_id as scheduleId from hospital_schedule where phone ='11400010022' ORDER BY create_time desc limit 0,1;"
+        },
+        "expectedother":{
+            "type": 3,
+            "errMsg":"已有预约订单，无法预约",
+            "scheduleNumber":""
+        }
+    },
+    "case_hospitalschedule_004": {
+        "status_code": 400,
+        "expectedother":{"error": "预约日期已经预约满,请选择其他日期"}
+    },
+
+    "case_hospitalschedule_005": {
+        "status_code": 401
+    },
+    "case_hospitalschedule_006": {
+        "status_code": 200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT schedule_number as scheduleNumber from hospital_schedule where phone ='11400010022' ORDER BY create_time desc limit 0,1"
+        },
+        "expectedother":{
+            "type": 4,
+            "errMsg":"",
+            "scheduleId":""
+        }
+    },
+    "case_hospitalschedule_007": {
+        "status_code": 200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT hospital_schedule_id as scheduleId from hospital_schedule where phone ='11400010022' ORDER BY create_time desc limit 0,1;"
+        },
+        "expectedother":{
+            "type": 3,
+            "errMsg":"该客户已有预约订单，无法预约",
+            "scheduleNumber":""
+        }
+    },
+    "case_hospitalschedule_008": {
+        "status_code": 400,
+        "expectedother":{"error": "预约日期已经预约满,请选择其他日期"}
+    }
+}

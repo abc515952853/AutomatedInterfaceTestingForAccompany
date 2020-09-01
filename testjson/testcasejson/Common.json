@@ -255,6 +255,105 @@
         "applyState": "审核通过",
         "remarks": "我是一个备注",
         "auditor":"admin"
+    },
+    "case_common_031":{
+        "name": "测试部长",
+        "phone": "11400010018",
+        "teamPhone": "13000000000",
+        "level": 5,
+        "isPreparation": false
+    },
+    "case_common_032":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010018",
+        "verification_token":"320098"
+    },
+    "case_common_033":{
+        "name": "测试副部长",
+        "phone": "11400010019",
+        "teamPhone": "11400010018",
+        "level": 4,
+        "isPreparation": false
+    },
+    "case_common_034":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010019",
+        "verification_token":"320098"
+    },
+    "case_common_035":{
+        "name": "测试主任",
+        "phone": "11400010020",
+        "teamPhone": "11400010019",
+        "level": 3,
+        "isPreparation": false
+    },
+    "case_common_036":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010020",
+        "verification_token":"320098"
+    },
+    "case_common_037":{
+        "name": "测试副主任",
+        "phone": "11400010021",
+        "teamPhone": "11400010020",
+        "level": 2,
+        "isPreparation": false
+    },
+    "case_common_038":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010021",
+        "verification_token":"320098"
+    },
+    "case_common_039":{
+        "name": "测试业务员",
+        "phone": "11400010022",
+        "teamPhone": "11400010021",
+        "level": 1,
+        "isPreparation": false
+    },
+    "case_common_040":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010022",
+        "verification_token":"320098"
+    },
+    "case_common_041":{
+        "centerName": "测试事业中心",
+        "city": "宁波市",
+        "county": "北仑区",
+        "leaderId": 0,
+        "province": "浙江省"
+    },
+    "case_common_042":{
+            "address": "我是一个地址",
+            "amTotal": 0,
+            "city": "杭州市",
+            "county": "滨江区",
+            "cover": "accompanying/order/20190709/674cf81a8d4f4b74bdad5bbae61978fd.jpg",
+            "hospitalCenterId": 44,
+            "lat": "30.218729",
+            "level": "中医馆",
+            "linkMan": "测试斌",
+            "lng": "120.155411",
+            "logo": "accompanying/order/20190709/674cf81a8d4f4b74bdad5bbae61978fd.jpg",
+            "name": "测试中医馆",
+            "phone": "11400010000",
+            "pmTotal": 0,
+            "prescriptions": [1,2,3],
+            "province": "浙江省",
+            "state": 1,
+            "summary": "我是医馆简介",
+            "tags": "肿瘤,结节,失眠",
+            "therapy": "我是特色疗法"
     }
 
 }

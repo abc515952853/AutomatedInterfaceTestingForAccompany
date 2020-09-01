@@ -1,0 +1,91 @@
+{
+    "case_hospitalschedule_001":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 0,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09"
+    },
+    "case_hospitalschedule_002":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 0,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09"
+    },
+    "case_hospitalschedule_003":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 0,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09"
+    },
+    "case_hospitalschedule_004":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 0,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09"
+    },
+
+
+
+
+    
+    "case_hospitalschedule_005":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 1,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09",
+        "patientPhone": "18511111111"
+    },
+    "case_hospitalschedule_006":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 1,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09",
+        "patientPhone": "11400010011"
+    },
+    "case_hospitalschedule_007":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 1,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09",
+        "patientPhone": "11400010011"
+    },
+    "case_hospitalschedule_008":{
+        "disease": "结节",
+        "prescriptionId": 1,
+        "hospitalId": 23881,
+        "isContinueSchedule": false,
+        "isOtherSchedule": 1,
+        "patientName": "沈斌",
+        "scheduleTime": "上午",
+        "scheduleDate": "2020-09-09",
+        "patientPhone": "18533333333"
+    }
+}

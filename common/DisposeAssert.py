@@ -3,9 +3,12 @@ import types
 
 class DisposeAssert(unittest.TestCase):
     def AssertReport(self,expectedreport,apireport):
-        print(expectedreport)
         print('----------------------------------------------')
+        print("用例预期结果：")
+        print(expectedreport)
+        print("接口返回结果：")
         print(apireport)
+        print('----------------------------------------------')
         if type(expectedreport) is dict:
             for c in expectedreport.keys():
                 default = self.dict_get(apireport,c,None)

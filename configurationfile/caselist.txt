@@ -13,5 +13,11 @@
 #Department
 #DiseaseType
 #Disease
-ProtocolAgree
+#ProtocolAgree
 #Certification
+
+#ChinaHospital
+#HospitalDetail
+#FeedBack
+#PrescriptionShort
+#HospitalSchedule
