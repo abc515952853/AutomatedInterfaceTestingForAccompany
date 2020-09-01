@@ -21,3 +21,5 @@
 #FeedBack
 #PrescriptionShort
 #HospitalSchedule
+#ScheduleRecord
+ScheduleDetail

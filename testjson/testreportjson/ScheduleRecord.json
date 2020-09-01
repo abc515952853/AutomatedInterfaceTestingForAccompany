@@ -1,0 +1,19 @@
+{
+    "case_schedulerecord_001":{
+        "status_code":401
+    },
+    "case_schedulerecord_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT  hospital_schedule_id as scheduleId,hospital_id as hospitalId,hospital_name as hospitalName,hospital_logo as hospitalLogo,CONCAT(schedule_date,' ',schedule_time) as scheduleDate,is_other_schedule as isOtherSchedule from hospital_schedule  where phone ='11400010022' ORDER BY schedule_date desc"
+        }
+    },
+    "case_schedulerecord_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT  hospital_schedule_id as scheduleId,hospital_id as hospitalId,hospital_name as hospitalName,hospital_logo as hospitalLogo,CONCAT(schedule_date,' ',schedule_time) as scheduleDate,0 as isOtherSchedule from hospital_schedule  where patient_phone ='11400010011' ORDER BY schedule_date desc"
+        }
+    }
+}
