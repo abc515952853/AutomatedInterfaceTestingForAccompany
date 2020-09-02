@@ -8,7 +8,7 @@
                 {
                     "type":"sql",
                     "key":"prescriptions",
-                    "value":"SELECT a.prescription_id as prescriptionId,a.name,a.cover,a.suitable,CAST(a.doctor_id as CHAR) as doctorId,a.doctor_name as doctorName,a.disease,a.summary from  prescription a join hospital_prescription b on a.prescription_id = b.prescription_id join hospital c on b.hospital_id = c.hospital_id where c.name = '测试中医馆' and c.phone = '11400010000'"
+                    "value":"SELECT a.prescription_id as prescriptionId,a.name,a.cover,a.suitable,a.doctor_id as doctorId,a.doctor_name as doctorName,a.disease,a.summary from  prescription a join hospital_prescription b on a.prescription_id = b.prescription_id join hospital c on b.hospital_id = c.hospital_id where c.name = '测试中医馆' and c.phone = '11400010000'"
                 }
             ]
         }

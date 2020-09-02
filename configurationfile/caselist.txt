@@ -16,10 +16,10 @@
 #ProtocolAgree
 #Certification
 
-#ChinaHospital
-#HospitalDetail
-#FeedBack
-#PrescriptionShort
-#HospitalSchedule
-#ScheduleRecord
+ChinaHospital
+HospitalDetail
+FeedBack
+PrescriptionShort
+HospitalSchedule
+ScheduleRecord
 ScheduleDetail

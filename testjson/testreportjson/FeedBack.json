@@ -3,7 +3,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT hospital_feedback_id as hospitalFeedbackId,prescription_name as prescriptionName,nick_name as nickName,avatar,user_grade as userGrade,feed_back as feedBack, date_sub(DATE_FORMAT(create_time, '%Y-%m-%d %H:%i:%S'),interval 8 hour) as createTime from hospital_feedback where  hospital_id = (SELECT hospital_id from hospital where name = '测试中医馆' and phone = '11400010000') ORDER BY create_time desc"
+            "sql":"SELECT hospital_feedback_id as hospitalFeedbackId,prescription_name as prescriptionName,nick_name as nickName,avatar,user_grade as userGrade,feed_back as feedBack,DATE_FORMAT(create_time, '%Y-%m-%d %H:%i:%S') as createTime from hospital_feedback where  hospital_id = (SELECT hospital_id from hospital where name = '测试中医馆' and phone = '11400010000') ORDER BY create_time desc"
         }
     }
 }
