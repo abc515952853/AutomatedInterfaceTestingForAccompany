@@ -57,6 +57,8 @@ DELETE from umeng_push where user_id in (SELECT id from accompanying_identity.as
 DELETE from umeng_push_history where user_id in (SELECT id from accompanying_identity.aspnetusers a  where  a.PhoneNumber like '1140001%');
 DELETE from user_inventory where user_id in (SELECT id from accompanying_identity.aspnetusers a  where  a.PhoneNumber like '1140001%');
 DELETE from withdraw where user_id in (SELECT id from accompanying_identity.aspnetusers a  where  a.PhoneNumber like '1140001%');
+DELETE from hospital where phone like '1140001%' ;
+DELETE from hospital_center where leader_id in (SELECT agent_id from  accompanying_identity.agent where phone like '1140001%')
 DELETE from hospital_schedule where user_id in (SELECT id from accompanying_identity.aspnetusers a  where  a.PhoneNumber like '1140001%');
 DELETE FROM accompanying_identity.aspnetuserclaims where UserId in (SELECT id from accompanying_identity.aspnetusers a  where  a.PhoneNumber like '1140001%');
 DELETE From accompanying_identity.aspnetuserlogins where UserId in (SELECT id from accompanying_identity.aspnetusers a  where  a.PhoneNumber like '1140001%');
