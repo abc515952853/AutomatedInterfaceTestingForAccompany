@@ -1,0 +1,26 @@
+{
+    "case_orderdiscount_001":{
+        "status_code":200,
+        "expectedother":{
+            "discount":0.00
+        }
+    },
+    "case_orderdiscount_002":{
+        "status_code":200,
+        "expectedother":{
+            "discount":0.00
+        }
+    },
+    "case_orderdiscount_003":{
+        "status_code":200,
+        "expectedother":{
+            "discount":0.02
+        }
+    },
+    "case_orderdiscount_004":{
+        "status_code":200,
+        "expectedother":{
+            "discount":0.02
+        }
+    }
+}

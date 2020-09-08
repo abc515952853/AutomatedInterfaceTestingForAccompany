@@ -5,7 +5,7 @@
 #Banner
 #Version
 #VersionCheck
-DoctorArea
+#DoctorArea
 #DoctorAll
 #DoctorSigning
 #DoctorThink
@@ -23,3 +23,4 @@ DoctorArea
 #ScheduleRecord
 #ScheduleDetail
 #FullDate
+OrderDiscount
