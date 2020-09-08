@@ -6,10 +6,10 @@ from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,Di
 import os
 import time
 
-case_name = "DoctorArea"
+case_name = "FullDate"
 
 @ddt.ddt
-class DoctorArea(unittest.TestCase):
+class FullDate(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -20,7 +20,6 @@ class DoctorArea(unittest.TestCase):
         self.disposerelyhandle = DisposeRely.DisposeRely()
         self.disposeasserthandle = DisposeAssert.DisposeAssert()
         self.disposeenvhandle = DisposeEnv.DisposeEnv()
-
         self.disposespecialhandle = DisposeSpecial.DisposeSpecial()
 
     @classmethod
@@ -36,7 +35,7 @@ class DoctorArea(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_DoctorArea(self,data):
+    def test_FullDate(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #测试环境处理
@@ -49,12 +48,12 @@ class DoctorArea(unittest.TestCase):
         payload = self.disposecasehandle.get_payload(data)
         #获取请求类型
         method = data['请求类型']
-        # #请求接口
+        #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #对结果特殊处理下
-        expectedreport = self.disposespecialhandle.DoctorAreaSpecial(expectedreport)
+        expectedreport = self.disposespecialhandle.FullDateSpecial(expectedreport)
         #断言
         try: 
             #返回状态断言

@@ -26,6 +26,7 @@ class DisposeEnv:
                     elif envdata['nodetype'] == 'Set':
                         pass                             
             if "sql" in jsondata:
+                print(jsondata['sql'])
                 self.readdbhandle.modify_data(jsondata['sql'])
             if "api" in jsondata:
                 pass
