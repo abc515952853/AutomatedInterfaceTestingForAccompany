@@ -23,4 +23,5 @@
 #ScheduleRecord
 #ScheduleDetail
 #FullDate
+CustomizePay
 OrderDiscount
