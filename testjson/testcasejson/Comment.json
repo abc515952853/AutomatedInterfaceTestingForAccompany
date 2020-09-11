@@ -1,0 +1,32 @@
+{
+    "case_comment_001":{
+        "content": "我是一段评论1",
+        "location": "浙江省杭州市"
+    },
+    "case_comment_002":{
+        "commentId": 82,
+        "parentPetname": "测试2",
+        "content": "我是一段评论2",
+        "location": "浙江省杭州市"
+    },
+    "case_comment_003":{
+        "content": "我是一段评论3",
+        "location": "浙江省杭州市"
+    },
+    "case_comment_004":{
+        "commentId": 82,
+        "parentPetname": "测试4",
+        "content": "我是一段评论4",
+        "location": "浙江省杭州市"
+    },
+    "case_comment_005":{
+        "content": "我是一段评论5",
+        "location": "浙江省杭州市"
+    },
+    "case_comment_006":{
+        "commentId": 82,
+        "parentPetname": "测试6",
+        "content": "我是一段评论6",
+        "location": "浙江省杭州市"
+    }
+}

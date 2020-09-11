@@ -1,0 +1,44 @@
+{
+    "case_comment_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,location from moments_comment ORDER BY create_time desc LIMIT 0,1;"
+        }
+    },
+    "case_comment_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,location,parent_id as commentId,parent_petname as parentPetname from moments_comment ORDER BY create_time desc LIMIT 0,1;"
+        }
+    },
+    "case_comment_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,location from moments_comment ORDER BY create_time desc LIMIT 0,1;"
+        }
+    },
+    "case_comment_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,location,parent_id as commentId,parent_petname as parentPetname from moments_comment ORDER BY create_time desc LIMIT 0,1;"
+        }
+    },
+    "case_comment_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,location from moments_comment ORDER BY create_time desc LIMIT 0,1;"
+        }
+    },
+    "case_comment_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,location,parent_id as commentId,parent_petname as parentPetname from moments_comment ORDER BY create_time desc LIMIT 0,1;"
+        }
+    }
+}
