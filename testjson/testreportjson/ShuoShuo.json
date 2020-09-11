@@ -1,0 +1,23 @@
+{
+    "case_shuoshuo_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,voice,images,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,images,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,voice,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    }
+}
