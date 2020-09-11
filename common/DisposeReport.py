@@ -51,11 +51,12 @@ class DisposeReport:
                 dbdata = self.readdbhandle.search_all(sql)
                 if dbdata is not None:
                     if "datalist" in case_report['expected']:
-                        dbdata1 = []
+                        # dbdata1 = []
                         for dl in case_report['expected']['datalist']:
                             for data in dbdata:
-                                dbdata1.append(data[dl])
-                        dbdata = dbdata1
+                                data[dl] = data[dl].split(',')
+                        #         dbdata1.append(data[dl])
+                        # dbdata = dbdata1
             expecteddata["expecteddata"] = dbdata
 
         #获取expectedother的预期结果

@@ -260,6 +260,7 @@
         "name": "测试部长",
         "phone": "11400010018",
         "teamPhone": "13000000000",
+        "ReferrerPhone":"13000000000",
         "level": 5,
         "isPreparation": false
     },
@@ -274,6 +275,7 @@
         "name": "测试副部长",
         "phone": "11400010019",
         "teamPhone": "11400010018",
+        "ReferrerPhone":"11400010018",
         "level": 4,
         "isPreparation": false
     },
@@ -288,6 +290,7 @@
         "name": "测试主任",
         "phone": "11400010020",
         "teamPhone": "11400010019",
+        "ReferrerPhone":"11400010019",
         "level": 3,
         "isPreparation": false
     },
@@ -302,6 +305,7 @@
         "name": "测试副主任",
         "phone": "11400010021",
         "teamPhone": "11400010020",
+        "ReferrerPhone":"11400010020",
         "level": 2,
         "isPreparation": false
     },
@@ -316,6 +320,7 @@
         "name": "测试业务员",
         "phone": "11400010022",
         "teamPhone": "11400010021",
+        "ReferrerPhone":"11400010021",
         "level": 1,
         "isPreparation": false
     },

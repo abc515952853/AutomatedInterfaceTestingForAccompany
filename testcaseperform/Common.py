@@ -21,12 +21,10 @@ class Common(unittest.TestCase):
         self.readdbhandle = ReadDB.ReadDB()
         self.readtxthandle = ReadTxt.ReadTxt('cleardata')
         
-
-
         #清除测试数据
         sql = self.readtxthandle.get_clear_data()
         print('-------------------开始清除原测试数据-------------------')
-        # self.readdbhandle.modify_data(sql)
+        self.readdbhandle.modify_data(sql)
         print('-------------------结束清除原测试数据-------------------')
         print('--------------------开始创建测试数据--------------------')
 

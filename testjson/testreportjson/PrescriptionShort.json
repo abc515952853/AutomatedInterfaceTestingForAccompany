@@ -3,7 +3,7 @@
         "status_code":200,
         "expected":{
             "type":"ALL",
-            "sql":"SELECT prescription_id as prescriptionId,name,doctor_id as doctorId from prescription  ORDER BY prescription_id asc"
+            "sql":"SELECT prescription_id as prescriptionId,name,doctor_id as doctorId from prescription where state=1  ORDER BY prescription_id asc"
         }
     }
 }
