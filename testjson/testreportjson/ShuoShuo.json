@@ -19,5 +19,47 @@
             "type":"ONE",
             "sql":"SELECT content,voice,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
         }
+    },
+    "case_shuoshuo_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,voice,images,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,images,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,voice,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,voice,images,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_008":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,images,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_shuoshuo_009":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT content,voice,viewlimit_type as viewLimitType,location from moments_content ORDER BY create_time desc LIMIT 0,1"
+        }
     }
 }

@@ -17,5 +17,43 @@
         "voice": "/test/testphoto/ceshi.mp3",
         "viewLimitType": 1,
         "location": "浙江杭州"
+    },
+    "case_shuoshuo_004":{
+        "content": "我是一段说说内容1",
+        "voice": "/test/testphoto/ceshi.mp3",
+        "images": "/test/testphoto/ceshi.jpg",
+        "viewLimitType": 1,
+        "location": "浙江杭州"
+    },
+    "case_shuoshuo_005":{
+        "content": "我是一段说说内容2",
+        "images": "/test/testphoto/ceshi.jpg",
+        "viewLimitType": 1,
+        "location": "浙江杭州"
+    },
+    "case_shuoshuo_006":{
+        "content":"我是一段说说内容3",
+        "voice": "/test/testphoto/ceshi.mp3",
+        "viewLimitType": 1,
+        "location": "浙江杭州"
+    },
+    "case_shuoshuo_007":{
+        "content": "我是一段说说内容1",
+        "voice": "/test/testphoto/ceshi.mp3",
+        "images": "/test/testphoto/ceshi.jpg",
+        "viewLimitType": 1,
+        "location": "浙江杭州"
+    },
+    "case_shuoshuo_008":{
+        "content": "我是一段说说内容2",
+        "images": "/test/testphoto/ceshi.jpg",
+        "viewLimitType": 1,
+        "location": "浙江杭州"
+    },
+    "case_shuoshuo_009":{
+        "content":"我是一段说说内容3",
+        "voice": "/test/testphoto/ceshi.mp3",
+        "viewLimitType": 1,
+        "location": "浙江杭州"
     }
 }
