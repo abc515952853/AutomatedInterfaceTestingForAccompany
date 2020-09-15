@@ -26,5 +26,6 @@
 #CustomizePay
 #OrderDiscount
 #ShuoShuo
-#Comment
-Praise
+#Comment    
+#Praise
+SquareColumns
