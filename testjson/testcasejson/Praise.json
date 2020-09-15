@@ -1,0 +1,24 @@
+{
+    "case_praise_001":{
+        "isPraise": true,
+        "type": 1,
+        "location": "浙江省杭州市"
+    },
+    "case_praise_002":{        
+        "isPraise": false,
+        "type": 1,
+        "location": "浙江省杭州市"
+    },
+    "case_praise_003":{
+        "commentId":96,
+        "isPraise": true,
+        "type": 4,
+        "location": "浙江省杭州市"
+    },
+    "case_praise_004":{  
+        "commentId":96,      
+        "isPraise": false,
+        "type": 4,
+        "location": "浙江省杭州市"
+    }
+}
