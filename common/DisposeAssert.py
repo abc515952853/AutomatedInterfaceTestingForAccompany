@@ -16,7 +16,6 @@ class DisposeAssert(unittest.TestCase):
                 self.assertEqual(expectedreport[c],default)
         elif type(expectedreport) is list:
             self.assertListEqual(expectedreport,apireport)
-
             
     def dict_get(self,dict, objkey, default):
         tmp = dict

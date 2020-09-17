@@ -3,7 +3,10 @@ from tools import ReadConfig
 import json
 import datetime
 import os
+from pymysql import converters
 
+converions = converters.conversions
+converions[pymysql.FIELD_TYPE.BIT] = lambda x: False if '\x00' else True
 
 class ReadDB:
     def __init__(self):
@@ -24,6 +27,7 @@ class ReadDB:
                 password = self.db_password,
                 database = self.db_dbname,
                 charset = "utf8",
+                conv=converions#pymysql在读取bit类型时显示x00的解决办法
             )
             self.cur = self.conn.cursor(cursor = pymysql.cursors.DictCursor)#数据和字段名称一起带回
         except Exception as ex_results:

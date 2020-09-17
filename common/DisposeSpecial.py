@@ -27,5 +27,20 @@ class DisposeSpecial:
         if n_time > d_time:
             expectedreport1['expecteddata'].append(str(datetime.datetime.now().date())+' 上午')
         return expectedreport1
+
+    def MeDynamicSpecial(self,expectedreport):
+        for data in expectedreport['expecteddata']:
+            for i in range(len(data['images'])):
+                data['images'][i] = 'http://i.peiban85.com/'+data['images'][i]
+            if len(data['voice']) != 0:
+                data['voice'] = 'http://i.peiban85.com/'+data['voice'] 
+            if  len(data['publisher']['avatar']) !=0:
+                data['publisher']['avatar'] ='http://i.peiban85.com/'+data['publisher']['avatar']
+            data['isCanDelete'] = True
+            print(expectedreport)
+            data['isPraised'] = False
+            if len(data['images']) != 0:
+                data['share']['shareImage'] = data['images'][0]
+        return expectedreport
         
         

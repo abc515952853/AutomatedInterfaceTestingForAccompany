@@ -27,6 +27,7 @@ class DisposeReport:
         #判断有无sql断言，如果没有则返回接口状态
         if "expected" in case_report:
             sql = case_report['expected']['sql']
+            #这段代码只有前面某个用力再用
             if "keyword" in case_report['expected']:
                 jsondata = self.readcasejsonhandle.get_json_data()
                 keyword = case_report['expected']['keyword'].split(',') 
@@ -47,16 +48,26 @@ class DisposeReport:
                         for ex in case_report['expected']['expected2']:
                             if ex['type'] =='sql':
                                 dbdata[ex['key']] = self.readdbhandle.search_all(ex['value'])
+                else:
+                    dbdata = {}
             elif case_report['expected']['type'] == 'ALL':
                 dbdata = self.readdbhandle.search_all(sql)
-                if dbdata is not None:
+                if len(dbdata) != 0:
                     if "datalist" in case_report['expected']:
-                        # dbdata1 = []
                         for dl in case_report['expected']['datalist']:
                             for data in dbdata:
-                                data[dl] = data[dl].split(',')
-                        #         dbdata1.append(data[dl])
-                        # dbdata = dbdata1
+                                if len(data[dl]) == 0:
+                                    data[dl] = []
+                                else:
+                                    data[dl] = data[dl].split(',')
+                    if "expected2" in case_report['expected']:
+                        for ex in case_report['expected']['expected2']:
+                            if ex['type'] =='sql':
+                                dddata = self.readdbhandle.search_all(ex['value'])
+                                for i in range(len(dbdata)):
+                                    dbdata[i][ex['key']] = dddata[i]
+                else:
+                    dbdata = []
             expecteddata["expecteddata"] = dbdata
 
         #获取expectedother的预期结果
