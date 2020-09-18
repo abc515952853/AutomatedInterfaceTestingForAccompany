@@ -1,0 +1,50 @@
+{
+    "case_follow_001":{
+        "status_code":401
+    },
+    "case_follow_002":{
+        "status_code":200,
+        "expectedredis":[
+            {
+                "keyword":{
+                    "name":["rely_17.userid"],
+                    "key":["rely_11.userid"]
+                },
+                "nodetype": "Set",
+                "nodeoperation": "Get",
+                "name": "epeiban:set:follows:{userid}",
+                "key":"{userid}"
+            }
+        ]
+    },
+    "case_follow_003":{
+        "status_code":200,
+        "expectedredis":[
+            {
+                "keyword":{
+                    "name":["rely_17.userid"],
+                    "key":["rely_12.userid"]
+                },
+                "nodetype": "Set",
+                "nodeoperation": "Get",
+                "name": "epeiban:set:follows:{userid}",
+                "key":"{userid}"
+            }
+        ]
+    },
+    "case_follow_004":{
+        "status_code":200,
+        "expectedredis":[
+            {
+                "keyword":{
+                    "name":["rely_17.userid"],
+                    "key":["rely_14.userid"]
+                },
+                "nodetype": "Set",
+                "nodeoperation": "Get",
+                "name": "epeiban:set:follows:{userid}",
+                "key":"{userid}"
+            }
+        ]
+    }
+}

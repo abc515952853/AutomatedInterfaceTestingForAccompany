@@ -42,5 +42,10 @@ class DisposeSpecial:
             if len(data['images']) != 0:
                 data['share']['shareImage'] = data['images'][0]
         return expectedreport
+
+    def FollowSpecial(self,expectedreport):
+        if  "expecteddata" in expectedreport:
+            expectedreport['expecteddata']['followId'] = expectedreport['expecteddata'].pop('userid')
+        return expectedreport
         
         

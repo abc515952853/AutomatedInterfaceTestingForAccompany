@@ -1,4 +1,4 @@
-from tools import ReadConfig,ReadJson,ReadDB
+from tools import ReadConfig,ReadJson,ReadDB,ReadRedis
 from common import FormatConversion
 import json
 
@@ -12,6 +12,9 @@ class DisposeReport:
         self.readreportjsonhandle = ReadJson.ReadJson(casename,'REPORT')
         self.readcasejsonhandle = ReadJson.ReadJson(casename)
         self.readdbhandle = ReadDB.ReadDB()
+        self.readredishandle = ReadRedis.ReadRedis()
+
+        self.readrelyjsonhandle = ReadJson.ReadJson('RelyOn','RELYON')
 
     #获取预期结果
     def get_report(self,data):
@@ -32,10 +35,10 @@ class DisposeReport:
                 jsondata = self.readcasejsonhandle.get_json_data()
                 keyword = case_report['expected']['keyword'].split(',') 
                 #通过keyword从当前用例获得sql条件，拼装完整查询sql
-                sqlword = {}
+                sqlword = []
                 for i in range(len(keyword)): 
-                    sqlword[keyword[i].split('.')[-1]] = self.formatconversionhandle.FormatConversion(keyword[i],jsondata)
-                sql = sql.format(**sqlword)
+                    sqlword.append(self.formatconversionhandle.FormatConversion(keyword[i],jsondata))
+                sql = sql.format(*sqlword)
 
             #查询数据库获得需要断言字段
             if case_report['expected']['type'] == 'ONE':
@@ -69,6 +72,50 @@ class DisposeReport:
                 else:
                     dbdata = []
             expecteddata["expecteddata"] = dbdata
+        
+        if "expectedredis" in case_report:
+            for redis in case_report['expectedredis']:
+                redisql = redis['name']
+                rediskey = redis['key']
+                resultdata = {}
+                if "keyword" in redis:
+                    if "name" in redis['keyword']:
+                        redisword = {}
+                        for i in range(len(redis['keyword']['name'])):
+                            if "rely_" in redis['keyword']['name'][i]:
+                                jsondata = self.readrelyjsonhandle.get_json_data()
+                            elif "case_" in redis['keyword']['name'][i]:
+                                pass
+                            keyword = redis['keyword']['name'][i].split(',') 
+                            for ii in range(len(keyword)):
+                                redisword[keyword[i].split('.')[-1]]=self.formatconversionhandle.FormatConversion(keyword[ii],jsondata)
+                        name = redisql.format(**redisword)
+                    if "key" in redis['keyword']:
+                        redisword = {}
+                        for i in range(len(redis['keyword']['key'])):
+                            if "rely_" in redis['keyword']['key'][i]:
+                                jsondata = self.readrelyjsonhandle.get_json_data()
+                            elif "case_" in redis['keyword']['key'][i]:
+                                pass
+                            keyword = redis['keyword']['key'][i].split(',') 
+                            for ii in range(len(keyword)):
+                                redisword[keyword[i].split('.')[-1]]=self.formatconversionhandle.FormatConversion(keyword[ii],jsondata)
+                        key = rediskey.format(**redisword)   
+            if redis['nodetype'] == 'Hash':
+                    pass
+            elif redis['nodetype'] == 'String':
+                pass
+            elif redis['nodetype'] == 'List':
+                pass
+            elif redis['nodetype'] == 'Set':
+                if redis['nodeoperation'] =='Get':
+                    result = self.readredishandle.setsismember(name,key)
+                    if result:
+                        resultdata = redisword            
+            if  "expecteddata" in expecteddata:
+                expecteddata["expecteddata"].update(resultdata)
+            else:
+                expecteddata["expecteddata"] = resultdata
 
         #获取expectedother的预期结果
         if "expectedother" in case_report:
@@ -78,6 +125,9 @@ class DisposeReport:
                 expecteddata["expecteddata"] = case_report["expectedother"]
 
         if "asserttype" in case_report:
-            expecteddata['asserttype'] = case_report['asserttype']
+            if "expecteddata" in expecteddata:
+                expecteddata['asserttype'].update(case_report['asserttype'])
+            else:
+                expecteddata['asserttype'] = case_report['asserttype']
         return expecteddata
 

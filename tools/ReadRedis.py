@@ -43,5 +43,15 @@ class ReadRedis:
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)
+    
+    #判断 member 元素是否是集合 key 的成员
+    def setsismember(self,name,key):
+        self.read_redis()
+        try:
+            result = self.r.sismember(name,key)
+            return result
+        except Exception as ex_results:
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
 
 
