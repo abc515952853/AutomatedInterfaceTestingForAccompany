@@ -359,6 +359,35 @@
             "summary": "我是医馆简介",
             "tags": "肿瘤,结节,失眠",
             "therapy": "我是特色疗法"
+    },
+    "case_common_043":{
+        "name": "测试业务员",
+        "phone": "11400010023",
+        "teamPhone": "11400010021",
+        "ReferrerPhone":"11400010022",
+        "level": 1,
+        "isPreparation": false
+    },
+    "case_common_044":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010023",
+        "verification_token":"320098"
+    },
+    "case_common_045":{
+        "name": "测试业务员",
+        "phone": "11400010024",
+        "teamPhone": "11400010020",
+        "ReferrerPhone":"11400010020",
+        "level": 1,
+        "isPreparation": false
+    },
+    "case_common_046":{
+        "client_id":"app",
+        "grant_type":"phone_number_token",
+        "client_secret":"2e410faa120546b1922d36379bde2c8d",
+        "phone_number":"11400010024",
+        "verification_token":"320098"
     }
-
 }

@@ -49,5 +49,11 @@ class DisposeSpecial:
             expectedreport['expecteddata']['followId'] = expectedreport['expecteddata'].pop('userid')
         return expectedreport
     
+    #接口ChinaDoctorAgentMy特殊处理
+    def ChinaDoctorAgentMySpecial(self,expectedreport):
+        if  "expecteddata" in expectedreport:
+            expectedreport['expecteddata']['sales'] = float(expectedreport['expecteddata']['sales'])
+        return expectedreport
+    
         
         

@@ -1,0 +1,37 @@
+{
+    "case_chinadoctoragentmyteam_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.team_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010018'"
+        }
+    },    
+    "case_chinadoctoragentmyteam_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.team_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010019'"
+        }
+    },    
+    "case_chinadoctoragentmyteam_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.team_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010020'"
+        }
+    },    
+    "case_chinadoctoragentmyteam_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.team_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010021'"
+        }
+    },    
+    "case_chinadoctoragentmyteam_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.team_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010022'"
+        }
+    }
+}

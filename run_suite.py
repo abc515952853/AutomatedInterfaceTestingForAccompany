@@ -12,7 +12,7 @@ class Runtest:
     def set_case_suite(self):
         caseList = ReadJson.ReadJson('caselist',"CASELIST").get_case_list()
         print("本轮接口测试总计接口:"+str(len(caseList))+"个")
-        print("本次接口测试设计接口:"+str(caseList))
+        print("本次接口测试涉及接口:"+str(caseList))
         test_suite = unittest.TestSuite()
         suite_module = []
 

@@ -1,0 +1,37 @@
+{
+    "case_chinadoctoragentmy_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.`level`,a.name,a.is_preparation as isPreparation,b.Avatar as avatar,a.team_count as teamCount,cast(a.current_month_sales as char) as sales from accompanying_identity.agent a join accompanying_identity.aspnetusers b on a.user_id = b.id where phone = '11400010018'"
+        }
+    },    
+    "case_chinadoctoragentmy_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.`level`,a.name,a.is_preparation as isPreparation,b.Avatar as avatar,a.team_count as teamCount,cast(a.current_month_sales as char) as sales from accompanying_identity.agent a join accompanying_identity.aspnetusers b on a.user_id = b.id where phone = '11400010019'"
+        }
+    },    
+    "case_chinadoctoragentmy_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.`level`,a.name,a.is_preparation as isPreparation,b.Avatar as avatar,a.team_count as teamCount,cast(a.current_month_sales as char) as sales from accompanying_identity.agent a join accompanying_identity.aspnetusers b on a.user_id = b.id where phone = '11400010020'"
+        }
+    },    
+    "case_chinadoctoragentmy_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.`level`,a.name,a.is_preparation as isPreparation,b.Avatar as avatar,a.team_count as teamCount,cast(a.current_month_sales as char) as sales from accompanying_identity.agent a join accompanying_identity.aspnetusers b on a.user_id = b.id where phone = '11400010021'"
+        }
+    },    
+    "case_chinadoctoragentmy_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.`level`,a.name,a.is_preparation as isPreparation,b.Avatar as avatar,a.team_count as teamCount,cast(a.current_month_sales as char) as sales from accompanying_identity.agent a join accompanying_identity.aspnetusers b on a.user_id = b.id where phone = '11400010022'"
+        }
+    }
+}

@@ -431,25 +431,25 @@ class NetworkApi {
   /// 提交预约
   static final String hospitalScheduleSubmit = apiFix + "/HospitalSchedule/submit";
 
-  /// 我的预约列表
+  /// 我的预约列表------------------------------------------------------------------------------------------------------pass
   static final String hospitalScheduleScheduleRecord =
       apiFix + "/HospitalSchedule/my/scheduleRecord";
 
-  /// 我的预约详情
+  /// 我的预约详情------------------------------------------------------------------------------------------------------pass
   static String hospitalScheduleMyDetail(scheduleId) =>
       apiFix + "/HospitalSchedule/my/$scheduleId/detail";
 
-  /// 根据预约号查询状态
+  /// 根据预约号查询状态------------------------------------------------------------------------------------------------------pass
   static String hospitalScheduleOrderDiscount(scheduleNumber, hospitalId) =>
       apiFix + "/HospitalSchedule/$scheduleNumber/$hospitalId/order/discount";
 
-  /// 走进中医馆项目后台首页
+  /// 走进中医馆项目后台首页------------------------------------------------------------------------------------------------------pass
   static final String chinaDoctorAgentMy = apiFix + "/ChinaDoctorAgent/My";
 
-  /// 走进中医馆项目后台我的团队
+  /// 走进中医馆项目后台我的团队------------------------------------------------------------------------------------------------------pass
   static final String chinaDoctorAgentMyTeam = apiFix + "/ChinaDoctorAgent/My/Team";
 
-  /// 走进中医馆项目后台我推荐的业务员
+  /// 走进中医馆项目后台我推荐的业务员------------------------------------------------------------------------------------------------------pass
   static final String chinaDoctorAgentMySalesman = apiFix + "/ChinaDoctorAgent/My/Salesman";
 
   /// 中医馆管理后台-医馆详情

@@ -1,0 +1,23 @@
+{
+    "case_chinadoctoragentmysalesman_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.referrer_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010020' and a.`level`=1"
+        }
+    },    
+    "case_chinadoctoragentmysalesman_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.referrer_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010021' and a.`level`=1"
+        }
+    },    
+    "case_chinadoctoragentmysalesman_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.level,a.name,a.is_preparation as isPreparation,c.avatar,a.user_id as userId from accompanying_identity.agent a join accompanying_identity.agent b on a.referrer_id = b.user_id join accompanying_identity.aspnetusers c on a.user_id = c.id  where b.phone = '11400010022' and a.`level`=1"
+        }
+    }
+}
