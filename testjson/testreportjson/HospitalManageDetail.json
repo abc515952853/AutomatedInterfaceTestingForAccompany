@@ -1,0 +1,9 @@
+{
+    "case_hospitailmanagedetail_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT hospital_id as hospitalId,name,logo,am_total as amTotal,pm_total as pmTotal from hospital where phone ='11400010000';"
+        }
+    }
+}

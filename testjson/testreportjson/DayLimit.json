@@ -1,0 +1,10 @@
+{
+    "case_daylimit_001":{
+        "status_code":200,
+        "expected":{
+            "keyword":"rely_20.hospital_id",
+            "type":"ONE",
+            "sql":"SELECT hospital_id as hospitalId,am_total as amTotal,pm_total as pmTotal  from hospital where hospital_id = {hospital_id}"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "case_daylimit_001":{
+        "amTotal": 10000,
+        "hospitalId": 11111,
+        "pmTotal": 10000
+    },
+    "case_daylimit_002":{
+        "amTotal": 0,
+        "hospitalId": 11111,
+        "pmTotal": 0
+    },
+    "case_daylimit_003":{
+        "amTotal": 10,
+        "hospitalId": 11111,
+        "pmTotal": 10
+    }
+}

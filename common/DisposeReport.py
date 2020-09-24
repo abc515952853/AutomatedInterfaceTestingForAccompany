@@ -30,13 +30,16 @@ class DisposeReport:
         #判断有无sql断言，如果没有则返回接口状态
         if "expected" in case_report:
             sql = case_report['expected']['sql']
-            #这段代码只有前面某个用力再用
             if "keyword" in case_report['expected']:
-                jsondata = self.readcasejsonhandle.get_json_data()
+                # jsondata = self.readcasejsonhandle.get_json_data()
                 keyword = case_report['expected']['keyword'].split(',') 
                 #通过keyword从当前用例获得sql条件，拼装完整查询sql
                 sqlword = {}
-                for i in range(len(keyword)): 
+                for i in range(len(keyword)):
+                    if "rely_" in keyword[i]:
+                        jsondata = self.readrelyjsonhandle.get_json_data()
+                    elif "case_" in keyword[i]:
+                        jsondata = self.readcasejsonhandle.get_json_data()
                     sqlword[keyword[i].split('.')[-1]] = self.formatconversionhandle.FormatConversion(keyword[i],jsondata)
                 sql = sql.format(**sqlword)
 

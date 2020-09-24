@@ -213,8 +213,26 @@
         {
             "casename":"ChinaDoctorAgentMySalesman",
             "api":"/api/v{version}/ChinaDoctorAgent/My/Salesman",
-            "skip":true,
+            "skip":false,
             "annotation":"走进中医馆项目后台我推荐的业务员" 
+        },
+        {
+            "casename":"HospitalManageDetail",
+            "api":"/api/v{version}/Hospital/background/manage/detail",
+            "skip":false,
+            "annotation":"中医馆管理后台-医馆详情" 
+        },
+        {
+            "casename":"HospitalManageDetail",
+            "api":"/api/v{version}/Hospital/background/manage/detail",
+            "skip":false,
+            "annotation":"中医馆管理后台-医馆详情" 
+        },
+        {
+            "casename":"DayLimit",
+            "api":"/api/v{version}/Hospital/background/day/limit",
+            "skip":true,
+            "annotation":"中医馆管理后台-修改限额" 
         }
     ]
 }

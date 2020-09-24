@@ -416,19 +416,19 @@ class NetworkApi {
   static final String squareSearch = apiFix + "/Square/search";
 
   /// TODO  ———————— 中医馆TCM
-  /// 名方列表
+  /// 名方列表------------------------------------------------------------------------------------------------------pass
   static final String prescriptionShort = apiFix + "/Prescription/short";
 
-  /// 中医院列表
+  /// 中医院列表------------------------------------------------------------------------------------------------------pass
   static String tcmList(String type) => apiFix + "/Hospital/$type";
 
-  /// 中医院详情
+  /// 中医院详情------------------------------------------------------------------------------------------------------pass
   static String tcmDetail(int hospitalId) => apiFix + "/Hospital/$hospitalId/detail";
 
-  /// 医院患者反馈
+  /// 医院患者反馈------------------------------------------------------------------------------------------------------pass
   static String tcmDetailFeedback(int hospitalId) => apiFix + "/Hospital/$hospitalId/feedback";
 
-  /// 提交预约
+  /// 提交预约------------------------------------------------------------------------------------------------------pass
   static final String hospitalScheduleSubmit = apiFix + "/HospitalSchedule/submit";
 
   /// 我的预约列表------------------------------------------------------------------------------------------------------pass
@@ -452,9 +452,9 @@ class NetworkApi {
   /// 走进中医馆项目后台我推荐的业务员------------------------------------------------------------------------------------------------------pass
   static final String chinaDoctorAgentMySalesman = apiFix + "/ChinaDoctorAgent/My/Salesman";
 
-  /// 中医馆管理后台-医馆详情
+  /// 中医馆管理后台-医馆详情------------------------------------------------------------------------------------------------------pass
   static final String hospitalBackgroundManageDetail = apiFix + "/Hospital/background/manage/detail";
 
-  /// 中医馆管理后台-修改限额
+  /// 中医馆管理后台-修改限额------------------------------------------------------------------------------------------------------pass
   static final String hospitalBackgroundDayLimit = apiFix + "/Hospital/background/day/limit";
 }
