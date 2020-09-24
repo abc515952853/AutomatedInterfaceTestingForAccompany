@@ -1,7 +1,7 @@
 import unittest
 import datetime
 import os
-from tools import ReadTxt,HTMLTestReportCN,Smtp
+from tools import ReadTxt,HTMLTestReportCN,Smtp,ReadJson
 
 class Runtest:
     def __init__(self):
@@ -10,7 +10,9 @@ class Runtest:
         self.reportPath = os.path.join(proDir, "testreport")
         
     def set_case_suite(self):
-        caseList = ReadTxt.ReadTxt('caselist').get_case_list()
+        caseList = ReadJson.ReadJson('caselist',"CASELIST").get_case_list()
+        print("本轮接口测试总计接口:"+str(len(caseList))+"个")
+        print("本次接口测试设计接口:"+str(caseList))
         test_suite = unittest.TestSuite()
         suite_module = []
 

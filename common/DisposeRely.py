@@ -28,6 +28,5 @@ class DisposeRely:
                 for i in range(len(todata)):
                     self.formatconversionhandle.FormatSet(dbdata[todata[i].split('.')[-1]],todata[i],jsondata)
             self.readrelyjsonhandle.set_json_data(jsondata)
-                
 
 

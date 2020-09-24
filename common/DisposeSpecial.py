@@ -28,6 +28,7 @@ class DisposeSpecial:
             expectedreport1['expecteddata'].append(str(datetime.datetime.now().date())+' 上午')
         return expectedreport1
 
+    #接口MeDynamic特殊处理
     def MeDynamicSpecial(self,expectedreport):
         for data in expectedreport['expecteddata']:
             for i in range(len(data['images'])):
@@ -37,15 +38,16 @@ class DisposeSpecial:
             if  len(data['publisher']['avatar']) !=0:
                 data['publisher']['avatar'] ='http://i.peiban85.com/'+data['publisher']['avatar']
             data['isCanDelete'] = True
-            print(expectedreport)
             data['isPraised'] = False
             if len(data['images']) != 0:
                 data['share']['shareImage'] = data['images'][0]
         return expectedreport
 
+    #接口Follow特殊处理
     def FollowSpecial(self,expectedreport):
         if  "expecteddata" in expectedreport:
             expectedreport['expecteddata']['followId'] = expectedreport['expecteddata'].pop('userid')
         return expectedreport
+    
         
         

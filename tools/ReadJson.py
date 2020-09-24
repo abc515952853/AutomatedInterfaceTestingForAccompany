@@ -13,6 +13,8 @@ class ReadJson:
             self.JsonPath = os.path.join(proDir, "testjson\\testreportjson\{0}.json".format(jsonname))
         elif type =='ENV':
             self.JsonPath = os.path.join(proDir, "testjson\\testenvjson\{0}.json".format(jsonname))
+        elif type == 'CASELIST':
+            self.JsonPath = os.path.join(proDir,"configurationfile\{0}.json".format(jsonname))
         else :
             self.JsonPath = os.path.join(proDir, "testjson\\testcasejson\{0}.json".format(jsonname))
 
@@ -59,6 +61,21 @@ class ReadJson:
         try:
             json.dump(new_dict,self.fb)
             self.close_json()
+        except Exception as ex_results:
+            print("程序终止,抓了一个异常：",ex_results,)
+            os._exit(0)
+
+    def get_case_list(self):
+        self.read_json()
+        try:
+            caselist = []
+            self.data = json.load(self.fb)
+            self.close_json()
+            if "caselist" in self.data:
+                for i in self.data["caselist"]:
+                    if i["skip"] is True:
+                        caselist.append(i["casename"])
+            return caselist
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)

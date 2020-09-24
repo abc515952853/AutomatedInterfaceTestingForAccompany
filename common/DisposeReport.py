@@ -35,10 +35,10 @@ class DisposeReport:
                 jsondata = self.readcasejsonhandle.get_json_data()
                 keyword = case_report['expected']['keyword'].split(',') 
                 #通过keyword从当前用例获得sql条件，拼装完整查询sql
-                sqlword = []
+                sqlword = {}
                 for i in range(len(keyword)): 
-                    sqlword.append(self.formatconversionhandle.FormatConversion(keyword[i],jsondata))
-                sql = sql.format(*sqlword)
+                    sqlword[keyword[i].split('.')[-1]] = self.formatconversionhandle.FormatConversion(keyword[i],jsondata)
+                sql = sql.format(**sqlword)
 
             #查询数据库获得需要断言字段
             if case_report['expected']['type'] == 'ONE':
