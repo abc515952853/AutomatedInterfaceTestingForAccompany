@@ -169,22 +169,34 @@
             "annotation":"创建说说"
         },
         {
+            "casename":"Article",
+            "api":"/api/v{version}/Moments/Article",
+            "skip":true,
+            "annotation":"创建文章"
+        },
+        {
             "casename":"Comment",
             "api":"/api/v{version}/Moments/{momentid}/Comment",
             "skip":false,
-            "annotation":"评论说说"
+            "annotation":"评论动态"
         },
         {
             "casename":"Praise",
             "api":"/api/v{version}/Moments/{momentid}/Praise",
             "skip":false,
-            "annotation":"说说点赞"
+            "annotation":"动态点赞"
         },
         {
             "casename":"SquareColumns",
             "api":"/api/v{version}/Square/columns",
             "skip":false,
             "annotation":"广场栏目"
+        },
+        {
+            "casename":"SquareSearch",
+            "api":"/api/v{version}/Square/search",
+            "skip":false,
+            "annotation":"广场具体栏目下的列表"
         },
         {
             "casename":"MeDynamic",
@@ -231,7 +243,7 @@
         {
             "casename":"DayLimit",
             "api":"/api/v{version}/Hospital/background/day/limit",
-            "skip":true,
+            "skip":false,
             "annotation":"中医馆管理后台-修改限额" 
         }
     ]

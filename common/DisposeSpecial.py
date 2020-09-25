@@ -54,6 +54,21 @@ class DisposeSpecial:
         if  "expecteddata" in expectedreport:
             expectedreport['expecteddata']['sales'] = float(expectedreport['expecteddata']['sales'])
         return expectedreport
+
+    #接口SquareSearch特殊处理
+    def SquareSearch(self,expectedreport):
+        for data in expectedreport['expecteddata']:
+            for i in range(len(data['images'])):
+                data['images'][i] = 'http://i.peiban85.com/'+data['images'][i]
+            if len(data['voice']) != 0:
+                data['voice'] = 'http://i.peiban85.com/'+data['voice'] 
+            if  len(data['publisher']['avatar']) !=0:
+                data['publisher']['avatar'] ='http://i.peiban85.com/'+data['publisher']['avatar']
+            data['isCanDelete'] = False
+            data['isPraised'] = False
+            if len(data['images']) != 0:
+                data['share']['shareImage'] = data['images'][0]
+        return expectedreport
     
         
         

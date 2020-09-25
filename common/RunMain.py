@@ -21,12 +21,12 @@ class RunMethod:
 		try:
 			if header !=None:
 				if data != None:
-					res = requests.get(url=url,data=json.dumps(data),headers=header)
+					res = requests.get(url=url,params=data,headers=header)
 				else:
 					res = requests.get(url=url,headers=header)
 			else:
 				if data != None:
-					res = requests.get(url=url,data=json.dumps(data))
+					res = requests.get(url=url,params=data)
 				else:
 					res = requests.get(url=url)
 			return res

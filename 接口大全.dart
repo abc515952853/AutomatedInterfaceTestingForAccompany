@@ -8,7 +8,7 @@ class NetworkApi {
   static final String uploadMultiple = apiFix + "/Upload/Multiple";
 
   /// TODO  ———————— 登录
-  /// 获取Token
+  /// 获取Token------------------------------------------------------------------------------------pass
   static final String connectToken = "/connect/token";
 
   /// get 获取用户信息
@@ -64,18 +64,18 @@ class NetworkApi {
   /// post 更新极光 token
   static final String userJPush = apiFix + "/Jiguang/Token";
 
-  /// get 获取版本更新策略
+  /// get 获取版本更新策略-----------------------------------------------------------------------------------pass
   static String versionCheck(String accessToken, String platform) =>
       apiFix + "/Version/$accessToken/$platform";
 
-  /// get 检查更新
+  /// get 检查更新-----------------------------------------------------------------------------------pass
   static String versionCheckToken(String accessToken, String platform) =>
       apiFix + "/Version/check/$accessToken/$platform";
 
-  /// 病种类型
+  /// 病种类型---------------------------------------------------------------------------------pass
   static final String publicDiseaseType = apiFix + "/Public/diseaseType";
 
-  /// 检索病种列表
+  /// 检索病种列表---------------------------------------------------------------------------------pass
   static final String publicDisease = apiFix + "/Public/disease";
 
   /// 根据病种类型查询病种列表 xxx/1
@@ -94,7 +94,7 @@ class NetworkApi {
 
 // ———————————————————————————————————————————————————————————————
   /// TODO  ———————— 用户
-  /// 提交认证审核
+  /// 提交认证审核----------------------------------------------------------------------------------------pass
   static final String certification = apiFix + "/Certification";
 
   /// 获取用户信息
@@ -124,7 +124,7 @@ class NetworkApi {
   /// 派发
   static String userIdSend(String id) => apiFix + "/User/$id/Send";
 
-  /// 协议同意
+  /// 协议同意----------------------------------------------------------------------------------------------pass
   static final String protocolAgree = apiFix + "/Protocol/Agree";
 
   /// 查询推广员的客户列表
@@ -133,7 +133,7 @@ class NetworkApi {
   /// 客户拨打电话(v2.3.1)
   static String userIDCall(String id) => apiFix + "/User/$id/Call";
 
-  /// 获取验证码
+  /// 获取验证码------------------------------------------------------------------------------------------------------pass
   static final String smsSend = apiFix + "/SMS/Send";
 
   /// 邀请成为代理
@@ -165,7 +165,7 @@ class NetworkApi {
   /// 执行小秘书（右上角关闭事件）
   static final String topicDeleteNotice = apiFix + "/Topic/DeleteNotice";
 
-  /// 点赞
+  /// 点赞----------------------------------------------------------------------------------------------------------pass
   static final String topicPraise = apiFix + "/Topic/Praise";
 
   /// 接受咨询邀请(医生抢单) noticeId
@@ -191,22 +191,22 @@ class NetworkApi {
 
 // ———————————————————————————————————————————————————————————————
   /// TODO  ———————— 医生
-  /// 医院短列表
+  /// 医院短列表--------------------------------------------------------------------------------pass
   static final String hospitalShort = apiFix + "/Hospital/short";
 
-  /// 医生列表（所有医生）
+  /// 医生列表（所有医生）--------------------------------------------------------------------------------pass
   static final String doctorAll = apiFix + "/Doctor/doctorAll";
 
-  /// 医生地区
+  /// 医生地区--------------------------------------------------------------------------------pass
   static final String doctorDoctorArea = apiFix + "/Doctor/doctorArea";
 
-  /// 联想医生
+  /// 联想医生--------------------------------------------------------------------------------pass
   static final String doctorThinkDoctor = apiFix + "/Doctor/thinkDoctor";
 
   /// 快速就医-提交需求
   static final String demand = apiFix + "/Demand";
 
-  /// 医生列表（签约医生）
+  /// 医生列表（签约医生）--------------------------------------------------------------------------------pass
   static final String doctorSigning = apiFix + "/Doctor/doctorSigning";
 
   /// 修改医生简介
@@ -215,7 +215,7 @@ class NetworkApi {
   /// 我提交的需求
   static final String demandMyDemand = apiFix + "/Demand/myDemand";
 
-  /// 科室短列表
+  /// 科室短列表---------------------------------------------------------------------------------pass
   static String departmentId(int hospitalId) => apiFix + "/Department/$hospitalId";
 
 // ———————————————————————————————————————————————————————————————
@@ -242,7 +242,7 @@ class NetworkApi {
 
 // ———————————————————————————————————————————————————————————————
   /// TODO  ———————— 聚合接口
-  /// 首页聚合接口
+  /// 首页聚合接口---------------------------------------------------------------------------------------------pass
   static final String home = apiFix + "/Home";
 
   /// 我的帐户
@@ -341,7 +341,7 @@ class NetworkApi {
   /// 推荐
   static final String followRecommend = apiFix + "/Follow/Recommend";
 
-  /// 关注
+  /// 关注-------------------------------------------------------------------------------------------pass
   static final String follow = apiFix + "/Follow";
 
   /// 取消关注
@@ -367,37 +367,37 @@ class NetworkApi {
 
 // ———————————————————————————————————————————————————————————————
   /// TODO  ———————— 说说（圈子）
-  /// 阳光社群
+  /// 阳光社群----------------------------------------------------------------------------------------------------------none
   static final String moments = apiFix + "/Moments";
 
-  /// 圈子点赞
+  /// 圈子点赞----------------------------------------------------------------------------------------------------------pass
   static String momentsIdPraise(String cycleId) => apiFix + "/Moments/$cycleId/Praise";
 
   /// put 删除/ get 阳光社群详情
   static String momentsId(String cycleId) => apiFix + "/Moments/$cycleId";
 
-  /// 创建说说
+  /// 创建说说---------------------------------------------------------------------------------------------------pass
   static final String momentsShuoshuo = apiFix + "/Moments/Shuoshuo";
 
-  /// 查询个人草稿数量
+  /// 查询个人草稿数量---------------------------------------------------------------------------------------none
   static final String momentsDraftsCount = apiFix + "/Moments/Drafts/Count";
 
-  /// 创建文章
+  /// 创建文章---------------------------------------------------------------------------------------none
   static final String momentsArticle = apiFix + "/Moments/Article";
 
-  /// 推荐给所有人，本月还剩下次数
+  /// 推荐给所有人，本月还剩下次数---------------------------------------------------------------------------------------none
   static final String momentsPushResidueCount = apiFix + "/Moments/Push/ResidueCount";
 
-  /// 阳光社群草稿箱
+  /// 阳光社群草稿箱---------------------------------------------------------------------------------------none
   static final String momentsDrafts = apiFix + "/Moments/Drafts";
 
-  /// 圈子评论
+  /// 圈子评论----------------------------------------------------------------------------------------------------------pass
   static String momentsIdComment(String cycleId) => apiFix + "/Moments/$cycleId/Comment";
 
-  /// 用户个人动态
+  /// 用户个人动态---------------------------------------------------------------------------------------------------pass
   static final String meDynamic = apiFix + "/Me/Dynamic";
 
-  /// 用户个人动态
+  /// 用户个人动态---------------------------------------------------------------------------------------none
   static final String momentsExternalLink = apiFix + "/Moments/ExternalLink";
 
   /// TODO  ———————— 代理
@@ -409,10 +409,10 @@ class NetworkApi {
   static final String agentApply = apiFix + "/Agent/Apply";
 
   /// TODO  ———————— 广场
-  /// 广场栏目
+  /// 广场栏目------------------------------------------------------------------------------------------------------pass
   static final String squareColumns = apiFix + "/Square/columns";
 
-  /// 广场具体栏目下的列表
+  /// 广场具体栏目下的列表------------------------------------------------------------------------------------------------------pass
   static final String squareSearch = apiFix + "/Square/search";
 
   /// TODO  ———————— 中医馆TCM
