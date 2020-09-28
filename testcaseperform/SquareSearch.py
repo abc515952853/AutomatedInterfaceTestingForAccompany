@@ -52,14 +52,14 @@ class SquareSearch(unittest.TestCase):
         r = self.runmethodhandle.run_main(url,method,header,payload)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
-        #对结果特殊处理下
-        expectedreport = self.disposespecialhandle.SquareSearch(expectedreport)
+        # #对结果特殊处理下
+        # expectedreport = self.disposespecialhandle.SquareSearch(expectedreport)
         #断言
         try: 
             #返回状态断言
             self.assertEqual(expectedreport['status_code'],r.status_code)
             if r.status_code == 200:
-                #数据断言
+                #数据断言~
                 if "expecteddata" in expectedreport:
                     if r.text != '':
                         self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))

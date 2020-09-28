@@ -93,10 +93,6 @@ class ReadDB:
         finally:
             self.close_db()
 
-
-
-
-
 # if __name__ == "__main__":
 #     a = ReadDB()
 #     sql = "delete from test where name ='wangdachuizi '"

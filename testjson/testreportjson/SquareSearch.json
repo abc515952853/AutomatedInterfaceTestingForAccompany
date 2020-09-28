@@ -1,42 +1,8 @@
 {
     "case_squaresearch_001":{
-        "status_code":200,
-        "expected":{
-            "type":"ALL",
-            "sql":"SELECT a.moments_content_id as id,cast(a.moments_content_type as CHAR) as type,a.cover,a.voice,a.images,a.title,a.description,DATE_FORMAT(a.publish_time, '%Y/%m/%d %H:%i:%S') as publishTime,a.content,a.praises,a.location,a.comments,false as isPraised,null as associatedId,is_need_push as isNeedPush,cast(client_type as CHAR) as clientType,true as isCanDelete,'11' as publisher,is_contain_video as isContainVideo,video_url as videoUrl,source_url as sourceUrl  from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id  ORDER BY moments_content_id desc limit 0,20;",
-            "datalist":["images"],
-            "expected2":[
-                {
-                    "type":"sql",
-                    "key":"publisher",
-                    "value":"SELECT b.id as userId,b.PetName as petname,b.avatar,cast(b.UserGrade as CHAR) as userGrade,cast(b.IsKOL as CHAR) as kolType  from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id  ORDER BY moments_content_id desc limit 0,20;"
-                },
-                {
-                    "type":"sql",
-                    "key":"share",
-                    "value":"SELECT CONCAT(PetName,'发布的说说') as shareTitle, CONCAT('http://h5.qianjifang.com.cn/App/DynamicDetail?id=',b.moments_content_id,'&type=',b.moments_content_type) as shareUrl,b.content as shareDesc,'http://i.peiban85.com/accompanying/default/logo/epeiban-logo.png' as shareImage from  accompanying_identity.aspnetusers a join moments_content b on a.id =b.user_id  order by b.create_time desc limit 0,20"
-                }
-            ]
-        }
+        "status_code":200
     },
     "case_squaresearch_002":{
-        "status_code":200,
-        "expected":{
-            "type":"ALL",
-            "sql":"SELECT a.moments_content_id as id,cast(a.moments_content_type as CHAR)  as type,a.cover,a.voice,a.images,a.title,a.description,DATE_FORMAT(a.publish_time, '%Y/%m/%d %H:%i:%S') as publishTime,a.content,a.praises,a.location,a.comments,false as isPraised,null as associatedId,is_need_push as isNeedPush,cast(client_type as CHAR) as clientType,true as isCanDelete,'11' as publisher,is_contain_video as isContainVideo,video_url as videoUrl,source_url as sourceUrl  from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id  ORDER BY moments_content_id desc limit 0,20;",
-            "datalist":["images"],
-            "expected2":[
-                {
-                    "type":"sql",
-                    "key":"publisher",
-                    "value":"SELECT b.id as userId,b.PetName as petname,b.avatar,cast(b.UserGrade as CHAR) as userGrade,cast(b.IsKOL as CHAR) as kolType  from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id  ORDER BY moments_content_id desc limit 0,20;"
-                },
-                {
-                    "type":"sql",
-                    "key":"share",
-                    "value":"SELECT CONCAT(PetName,'发布的说说') as shareTitle, CONCAT('http://h5.qianjifang.com.cn/App/DynamicDetail?id=',b.moments_content_id,'&type=',b.moments_content_type) as shareUrl,b.content as shareDesc,'http://i.peiban85.com/accompanying/default/logo/epeiban-logo.png' as shareImage from  accompanying_identity.aspnetusers a join moments_content b on a.id =b.user_id  order by b.create_time desc limit 0,20"
-                }
-            ]
-        }
+        "status_code":200
     }
 }
