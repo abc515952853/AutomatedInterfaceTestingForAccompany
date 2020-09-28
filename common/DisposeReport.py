@@ -58,11 +58,11 @@ class DisposeReport:
                     dbdata = {}
             elif case_report['expected']['type'] == 'ALL':
                 dbdata = self.readdbhandle.search_all(sql)
-                if len(dbdata) != 0:
+                if dbdata is not None:
                     if "datalist" in case_report['expected']:
                         for dl in case_report['expected']['datalist']:
                             for data in dbdata:
-                                if len(data[dl]) == 0:
+                                if data[dl] is None:
                                     data[dl] = []
                                 else:
                                     data[dl] = data[dl].split(',')
@@ -132,5 +132,29 @@ class DisposeReport:
                 expecteddata['asserttype'].update(case_report['asserttype'])
             else:
                 expecteddata['asserttype'] = case_report['asserttype']
+
+        #遍历dict中的每个值
+        expecteddata = self.get_dict_value(expecteddata)
+
         return expecteddata
 
+    def get_dict_value(self,in_dict):
+        if type(in_dict) is dict:
+            for key in in_dict.keys():  # 迭代当前的字典层级
+                data = in_dict[key]  # 将当前字典层级的第一个元素的值赋值给data
+
+                # 如果当前data属于dict类型, 进行回归
+                if isinstance(data, dict):
+                    self.get_dict_value(data)
+                elif isinstance(data, list):
+                    for data1 in data:
+                        self.get_dict_value(data1)
+                else:
+                    if type(data) is bytes:
+                        if data == bytes([1]):
+                            in_dict[key]  = True
+                        else:
+                            in_dict[key]  = False
+                    if data is None:
+                        in_dict[key] =""
+        return in_dict

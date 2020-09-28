@@ -1,0 +1,41 @@
+{
+    "case_article_001":{
+        "title": "我是一篇旷烁古今的文章1",
+        "cover": "/test/testphoto/ceshi.jpg",
+        "description": "我是一段前无古人的描述1",
+        "content": "我是一段旷古绝今的文案内容1",
+        "isAllowReprinted": true,
+        "isDraft": false,
+        "viewLimitType": 1,
+        "location": "浙江省杭州市",
+        "isNeedPush": false,
+        "isContainVideo": true,
+        "videoUrl": "/test/testphoto/ceshi.MP3"
+    },
+    "case_article_002":{
+        "title": "我是一篇旷烁古今的文章2",
+        "cover": "/test/testphoto/ceshi.jpg",
+        "description": "我是一段前无古人的描述2",
+        "content": "我是一段旷古绝今的文案内容2",
+        "isAllowReprinted": true,
+        "isDraft": false,
+        "viewLimitType": 1,
+        "location": "浙江省杭州市",
+        "isNeedPush": false,
+        "isContainVideo": true,
+        "videoUrl": "/test/testphoto/ceshi.MP3"
+    },
+    "case_article_003":{
+        "title": "我是一篇旷烁古今的文章3",
+        "cover": "/test/testphoto/ceshi.jpg",
+        "description": "我是一段前无古人的描述3",
+        "content": "我是一段旷古绝今的文案内容3",
+        "isAllowReprinted": true,
+        "isDraft": false,
+        "viewLimitType": 1,
+        "location": "浙江省杭州市",
+        "isNeedPush": false,
+        "isContainVideo": true,
+        "videoUrl": "/test/testphoto/ceshi.MP3"
+    }
+}

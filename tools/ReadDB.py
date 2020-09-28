@@ -3,10 +3,9 @@ from tools import ReadConfig
 import json
 import datetime
 import os
-from pymysql import converters
 
-converions = converters.conversions
-converions[pymysql.FIELD_TYPE.BIT] = lambda x: False if '\x00' else True
+# from pymysql import converters
+
 
 class ReadDB:
     def __init__(self):
@@ -16,7 +15,10 @@ class ReadDB:
         self.db_username = configdata.get_data('DATABASE','db_username')
         self.db_password = configdata.get_data('DATABASE','db_password')
         self.db_dbname = configdata.get_data('DATABASE','db_dbname')
-    
+
+        # self.converions = converters.conversions
+        # self.converions[pymysql.FIELD_TYPE.BIT] = lambda x: False if '\x00' else True
+
     #打开数据库
     def read_db(self):
         try:
@@ -27,7 +29,7 @@ class ReadDB:
                 password = self.db_password,
                 database = self.db_dbname,
                 charset = "utf8",
-                conv=converions#pymysql在读取bit类型时显示x00的解决办法
+                # conv=self.converions#pymysql在读取bit类型时显示x00的解决办法
             )
             self.cur = self.conn.cursor(cursor = pymysql.cursors.DictCursor)#数据和字段名称一起带回
         except Exception as ex_results:
@@ -53,8 +55,8 @@ class ReadDB:
         self.read_db()
         try:
             self.cur.execute(sql)
-            result = self.cur.fetchone()
-            return eval(str(result).replace('None',"''"))
+            result = self.cur.fetchone()  
+            return result
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)
@@ -62,13 +64,13 @@ class ReadDB:
             self.close_db()
 
 
-	#查询一条数据
+	#查询所有数据
     def search_all(self,sql):
         self.read_db()
         try:
             self.cur.execute(sql)
             result = self.cur.fetchall()
-            return eval(str(result).replace('None',"''"))
+            return result
         except Exception as ex_results:
             print("程序终止,抓了一个异常：",ex_results,)
             os._exit(0)

@@ -1,0 +1,23 @@
+{
+    "case_article_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT title,cover,description,content,is_allow_reprinted as isAllowReprinted,is_draft as isDraft,viewlimit_type as viewLimitType ,location,is_need_push as isNeedPush,is_contain_video as isContainVideo,video_url as videoUrl from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber = '11400010011' ORDER BY create_time desc LIMIT 0,1"
+        }
+    },    
+    "case_article_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT title,cover,description,content,is_allow_reprinted as isAllowReprinted,is_draft as isDraft,viewlimit_type as viewLimitType ,location,is_need_push as isNeedPush,is_contain_video as isContainVideo,video_url as videoUrl from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber = '11400010012' ORDER BY create_time desc LIMIT 0,1"
+        }
+    },    
+    "case_article_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT title,cover,description,content,is_allow_reprinted as isAllowReprinted,is_draft as isDraft,viewlimit_type as viewLimitType ,location,is_need_push as isNeedPush,is_contain_video as isContainVideo,video_url as videoUrl from moments_content a join accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber = '11400010014' ORDER BY create_time desc LIMIT 0,1"
+        }
+    }
+}

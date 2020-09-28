@@ -33,6 +33,8 @@ class DisposeSpecial:
         for data in expectedreport['expecteddata']:
             for i in range(len(data['images'])):
                 data['images'][i] = 'http://i.peiban85.com/'+data['images'][i]
+            if len(data['cover']) !=0:
+                data['cover'] = 'http://i.peiban85.com/'+data['cover']
             if len(data['voice']) != 0:
                 data['voice'] = 'http://i.peiban85.com/'+data['voice'] 
             if  len(data['publisher']['avatar']) !=0:
@@ -41,6 +43,12 @@ class DisposeSpecial:
             data['isPraised'] = False
             if len(data['images']) != 0:
                 data['share']['shareImage'] = data['images'][0]
+            if data['type'] == 2:
+                data['content'] = ''
+                data['share']['shareTitle'] = data['title']
+                data['share']['shareDesc'] = data['description']
+                data['share']['shareImage'] = data['cover']
+                
         return expectedreport
 
     #接口Follow特殊处理
@@ -60,14 +68,27 @@ class DisposeSpecial:
         for data in expectedreport['expecteddata']:
             for i in range(len(data['images'])):
                 data['images'][i] = 'http://i.peiban85.com/'+data['images'][i]
+            if len(data['cover']) !=0:
+                data['cover'] = 'http://i.peiban85.com/'+data['cover']
             if len(data['voice']) != 0:
                 data['voice'] = 'http://i.peiban85.com/'+data['voice'] 
             if  len(data['publisher']['avatar']) !=0:
                 data['publisher']['avatar'] ='http://i.peiban85.com/'+data['publisher']['avatar']
             data['isCanDelete'] = False
             data['isPraised'] = False
+            data['isContainVideo'] = False
+            data['videoUrl'] =''
             if len(data['images']) != 0:
                 data['share']['shareImage'] = data['images'][0]
+            if data['type'] == '2':
+                data['content'] = ''
+                data['share']['shareTitle'] = data['title']
+                data['share']['shareDesc'] = data['description']
+                data['share']['shareImage'] = data['cover']
+        return expectedreport
+
+    #接口Article特殊处理
+    def ArticleSpecial(self,expectedreport):
         return expectedreport
     
         

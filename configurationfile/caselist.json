@@ -171,7 +171,7 @@
         {
             "casename":"Article",
             "api":"/api/v{version}/Moments/Article",
-            "skip":true,
+            "skip":false,
             "annotation":"创建文章"
         },
         {
@@ -201,7 +201,7 @@
         {
             "casename":"MeDynamic",
             "api":"/api/v{version}/Me/Dynamic",
-            "skip":false,
+            "skip":true,
             "annotation":"个人动态"
         },
         {
