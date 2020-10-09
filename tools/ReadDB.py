@@ -6,7 +6,6 @@ import os
 
 # from pymysql import converters
 
-
 class ReadDB:
     def __init__(self):
         configdata = ReadConfig.ReadConfig()
@@ -63,7 +62,6 @@ class ReadDB:
         finally:
             self.close_db()
 
-
 	#查询所有数据
     def search_all(self,sql):
         self.read_db()
@@ -77,14 +75,13 @@ class ReadDB:
         finally:
             self.close_db()
 
-
 	#增加/修改/删除一条数据
     def modify_data(self,sqlarr):
         self.read_db() 
         try:
             for sql in sqlarr:
                 print('正在执行语句：'+ sql)
-                self.cur.execute(sql)  
+                self.cur.execute(sql) 
             self.conn.commit()
         except Exception as ex_results:
             self.conn.rollback()
@@ -97,6 +94,3 @@ class ReadDB:
 #     a = ReadDB()
 #     sql = "delete from test where name ='wangdachuizi '"
 #     a.modify_data(sql)
-
-
-        

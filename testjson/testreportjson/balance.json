@@ -1,0 +1,16 @@
+{
+    "case_balance_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT (a.freeze_money_in - a.freeze_money_out) as balance from account a   JOIN accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber ='11400010020'"
+        }
+    },
+    "case_balance_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT (a.money_in -a.money_out) as balance from account a   JOIN accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber ='11400010020'"
+        }
+    }
+}

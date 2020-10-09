@@ -1,31 +1,46 @@
+
+
+# -*- coding:utf-8 -*-
 import logging
 import os
 
-class Logging:
-    def __init__(self):
-        proDir = os.getcwd()#获取当前目录
-        self.ExclPath = os.path.join(proDir, "testlogging\\testlogging.log")
-        self.LOG_FORMAT = "\n\n%(asctime)s - %(levelname)s\r日志信息:%(message)s\n日志文件全路径:%(pathname)s\n日志所在行数:%(lineno)s\n日志接口:%(funcName)s\n异常及栈信息:\n"
-        self.DATE_FORMAT = "%Y-%m-%d %H:%M:%S %p"
-        logging.basicConfig(filename=self.ExclPath,level = logging.DEBUG,format=self.LOG_FORMAT,datefmt=self.DATE_FORMAT)
+log_path = os.path.dirname(getcwd.get_cwd())
+print(log_path)
+class Logger:
+    def __init__(self,loggername):
 
-    def debuglog(self,message = 'This is a debug log.'):
-        logging.debug(message,exc_info=True, stack_info=True)
-    
-    def infolog(self,message = 'This is a infolog log.'):
-        logging.info(message,exc_info=True,stack_info=True)
+        #创建一个logger
+        self.logger = logging.getLogger(loggername)
+        self.logger.setLevel(logging.DEBUG)
 
-    def warninglog(self,message = 'This is a warninglog log.'):
-        logging.warning(message,exc_info=True,stack_info=True)
-    
-    def errorlog(self,message = 'This is a errorlog log.'):
-        logging.error(message,exc_info=True,stack_info=True)
+        #创建一个handler，用于写入日志文件
+        log_path = os.path.dirname(getcwd.get_cwd())+"/logs/" # 指定文件输出路径，注意logs是个文件夹，一定要加上/，不然会导致输出路径错误，把logs变成文件名的一部分了
+        logname = log_path + 'out.log' #指定输出的日志文件名
+        fh = logging.FileHandler(logname,encoding = 'utf-8')  # 指定utf-8格式编码，避免输出的日志文本乱码
+        fh.setLevel(logging.DEBUG)
+
+        #创建一个handler，用于将日志输出到控制台
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.DEBUG)
+
+        # 定义handler的输出格式
+        formatter = logging.Formatter('%(asctime)s-%(name)s-%(levelname)s-%(message)s')
+        fh.setFormatter(formatter)
+        ch.setFormatter(formatter)
+
+        # 给logger添加handler
+        self.logger.addHandler(fh)
+        self.logger.addHandler(ch)
+
+
+    def get_log(self):
+      """定义一个函数，回调logger实例"""
+      return self.logger  
+
+
+if __name__ == '__main__':
+    t = Logger("hmk").get_log().debug("User %s is loging" % 'jeck')
         
-if __name__ == "__main__":
-    a = Logging()
-    a.debuglog()
-    a.infolog()
-    a.warninglog()
-    a.errorlog()
+
 
 
