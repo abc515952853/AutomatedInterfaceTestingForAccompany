@@ -90,6 +90,36 @@ class DisposeSpecial:
     #接口Article特殊处理
     def ArticleSpecial(self,expectedreport):
         return expectedreport
+
+
+    def MyLinesSpecial(self,expectedreport):
+        for data in expectedreport['expecteddata']:
+            data['createTime'] = str(data['createTime']).replace('-','/')
+            if data['businessType'] ==1:
+                data['type'] = "咨讯服务费"
+            elif data['businessType'] ==2:
+                data['type'] = "转结可提现"
+            elif data['businessType'] ==100:
+                data['type'] = "咨询费"                
+            elif data['businessType'] ==101:
+                data['type'] = "推广佣金"
+            elif data['businessType'] ==102:
+                data['type'] = "产品销售"
+            elif data['businessType'] ==103:
+                data['type'] = "云仓收益"
+            elif data['businessType'] ==994:
+                data['type'] = "后台充值"
+            elif data['businessType'] ==995:
+                data['type'] = "提现失败"                
+            elif data['businessType'] ==996:
+                data['type'] = "原路返还"
+            elif data['businessType'] ==997:
+                data['type'] = "退款" 
+            elif data['businessType'] ==998:
+                data['type'] = "提现"
+            elif data['businessType'] ==999:
+                data['type'] = "订单消费"                   
+        return expectedreport
     
         
         

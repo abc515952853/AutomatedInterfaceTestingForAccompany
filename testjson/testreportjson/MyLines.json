@@ -1,0 +1,23 @@
+{
+    "case_mylinese_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.account_list_id as id,a.title,a.money,a.direction,a.create_time as createTime,a.business_type as businessType,a.remark,'11' as type from account_list a   JOIN accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber ='11400010020' and account_type = 1 order by create_time desc;"
+        }
+    },
+    "case_mylinese_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.account_list_id as id,a.title,a.money,a.direction,a.create_time as createTime,a.business_type as businessType,a.remark,'11' as type from account_list a   JOIN accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber ='11400010020' and account_type = 2 order by create_time desc;"
+        }
+    },
+    "case_mylinese_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.account_list_id as id,a.title,a.money,a.direction,a.create_time as createTime,a.business_type as businessType,a.remark,'11' as type from account_list a   JOIN accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber ='11400010020' and account_type = 3 order by create_time desc;"
+        }
+    }
+}

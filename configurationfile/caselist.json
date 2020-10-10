@@ -3,247 +3,247 @@
         {
             "casename":"Common",
             "api":"",
-            "skip":false,
+            "skip":true,
             "annotation":"清除数据创建测试数据"
         },
         {
             "casename":"Send",
             "api":"/api/v{version}/SMS/Send",
-            "skip":false,
+            "skip":true,
             "annotation":"获取验证码"
         },
         {
             "casename":"Login",
             "api":"/connect/token",
-            "skip":false,
+            "skip":true,
             "annotation":"登录"
         },
         {
             "casename":"Home",
             "api":"/api/v{version}/Home",
-            "skip":false,
+            "skip":true,
             "annotation":"首页"
         },
         {
             "casename":"Banner",
             "api":"/api/v{version}/Banner",
-            "skip":false,
+            "skip":true,
             "annotation":"广告栏"
         },
         {
             "casename":"Version",
             "api":"/api/v{version}/Version/{token}/{platForm}",
-            "skip":false,
+            "skip":true,
             "annotation":"版本号"
         },
         {
             "casename":"VersionCheck",
             "api":"/api/v{version}/Version/check/{token}/{platForm}",
-            "skip":false,
+            "skip":true,
             "annotation":"检查版本号更新"
         },
         {
             "casename":"DoctorArea",
             "api":"/api/v{version}/Doctor/doctorArea",
-            "skip":false,
+            "skip":true,
             "annotation":"医生地区"
         },
         {
             "casename":"DoctorAll",
             "api":"/api/v{version}/Doctor/doctorAll",
-            "skip":false,
+            "skip":true,
             "annotation":"所有医生"
         },
         {
             "casename":"DoctorSigning",
             "api":"/api/v{version}/Doctor/doctorSigning",
-            "skip":false,
+            "skip":true,
             "annotation":"医生列表"
         },
         {
             "casename":"DoctorThink",
             "api":"/api/v{version}/Doctor/thinkDoctor",
-            "skip":false,
+            "skip":true,
             "annotation":"医生联想"
         },
         {
             "casename":"Hospital",
             "api":"/api/v{version}/Hospital/short",
-            "skip":false,
+            "skip":true,
             "annotation":"医院短列表"
         },
         {
             "casename":"Department",
             "api":"/api/v{version}/Department/{hospitalid}",
-            "skip":false,
+            "skip":true,
             "annotation":"科室列表"
         },
         {
             "casename":"DiseaseType",
             "api":"/api/v{version}/Public/diseaseType",
-            "skip":false,
+            "skip":true,
             "annotation":"病种类型"
         },
         {
             "casename":"Disease",
             "api":"/api/v{version}/Public/disease",
-            "skip":false,
+            "skip":true,
             "annotation":"病种"
         },
         {
             "casename":"ProtocolAgree",
             "api":"/api/v{version}/Protocol/Agree",
-            "skip":false,
+            "skip":true,
             "annotation":"同意协议"
         },
         {
             "casename":"Certification",
             "api":"/api/v{version}/Certification",
-            "skip":false,
+            "skip":true,
             "annotation":"身份认证"
         },
         {
             "casename":"ChinaHospital",
             "api":"/api/v{version}/Hospital/1",
-            "skip":false,
+            "skip":true,
             "annotation":"中医馆列表"
         },
         {
             "casename":"HospitalDetail",
             "api":"/api/v{version}/Hospital/{hospitalId}/detail",
-            "skip":false,
+            "skip":true,
             "annotation":"中医馆详情"
         },
         {
             "casename":"FeedBack",
             "api":"/api/v{version}/Hospital/{hospitalId}/feedback",
-            "skip":false,
+            "skip":true,
             "annotation":"患者反馈"
         },
         {
             "casename":"PrescriptionShort",
             "api":"/api/v{version}/Prescription/short",
-            "skip":false,
+            "skip":true,
             "annotation":"名方短列表"
         },
         {
             "casename":"HospitalSchedule",
             "api":"/api/v{version}/HospitalSchedule/submit",
-            "skip":false,
+            "skip":true,
             "annotation":"中医馆预约"
         },
         {
             "casename":"ScheduleRecord",
             "api":"/api/v{version}/HospitalSchedule/my/scheduleRecord",
-            "skip":false,
+            "skip":true,
             "annotation":"我的预约"
         },
         {
             "casename":"ScheduleDetail",
             "api":"/api/v{version}/HospitalSchedule/my/{scheduleid}/detail",
-            "skip":false,
+            "skip":true,
             "annotation":"我的预约详情"
         },
         {
             "casename":"FullDate",
             "api":"/api/v{version}/HospitalSchedule/{hospitalid}/fullDate",
-            "skip":false,
+            "skip":true,
             "annotation":"获取已约满的日期"
         },
         {
             "casename":"CustomizePay",
             "api":"/api/v{version}/Order/CustomizePay",
-            "skip":false,
+            "skip":true,
             "annotation":"自定义支付"
         },
         {
             "casename":"OrderDiscount",
             "api":"/api/v{version}/HospitalSchedule/{schedulenumber}/{hospitalid}/order/discount",
-            "skip":false,
+            "skip":true,
             "annotation":"订单折扣"
         },
         {
             "casename":"ShuoShuo",
             "api":"/api/v{version}/Moments/Shuoshuo",
-            "skip":false,
+            "skip":true,
             "annotation":"创建说说"
         },
         {
             "casename":"Article",
             "api":"/api/v{version}/Moments/Article",
-            "skip":false,
+            "skip":true,
             "annotation":"创建文章"
         },
         {
             "casename":"Comment",
             "api":"/api/v{version}/Moments/{momentid}/Comment",
-            "skip":false,
+            "skip":true,
             "annotation":"评论动态"
         },
         {
             "casename":"Praise",
             "api":"/api/v{version}/Moments/{momentid}/Praise",
-            "skip":false,
+            "skip":true,
             "annotation":"动态点赞"
         },
         {
             "casename":"SquareColumns",
             "api":"/api/v{version}/Square/columns",
-            "skip":false,
+            "skip":true,
             "annotation":"广场栏目"
         },
         {
             "casename":"SquareSearch",
             "api":"/api/v{version}/Square/search",
-            "skip":false,
+            "skip":true,
             "annotation":"广场具体栏目下的列表"
         },
         {
             "casename":"MeDynamic",
             "api":"/api/v{version}/Me/Dynamic",
-            "skip":false,
+            "skip":true,
             "annotation":"个人动态"
         },
         {
             "casename":"Follow",
             "api":"/api/v{version}/Follow",
-            "skip":false,
+            "skip":true,
             "annotation":"关注"
         },
         {
             "casename":"ChinaDoctorAgentMy",
             "api":"/api/v{version}/ChinaDoctorAgent/My",
-            "skip":false,
+            "skip":true,
             "annotation":"走进中医馆项目后台首页" 
         },
         {
             "casename":"ChinaDoctorAgentMyTeam",
             "api":"/api/v{version}/ChinaDoctorAgent/My/Team",
-            "skip":false,
+            "skip":true,
             "annotation":"走进中医馆项目后台我的团队" 
         },
         {
             "casename":"ChinaDoctorAgentMySalesman",
             "api":"/api/v{version}/ChinaDoctorAgent/My/Salesman",
-            "skip":false,
+            "skip":true,
             "annotation":"走进中医馆项目后台我推荐的业务员" 
         },
         {
             "casename":"HospitalManageDetail",
             "api":"/api/v{version}/Hospital/background/manage/detail",
-            "skip":false,
+            "skip":true,
             "annotation":"中医馆管理后台-医馆详情" 
         },
         {
             "casename":"HospitalManageDetail",
             "api":"/api/v{version}/Hospital/background/manage/detail",
-            "skip":false,
+            "skip":true,
             "annotation":"中医馆管理后台-医馆详情" 
         },
         {
             "casename":"DayLimit",
             "api":"/api/v{version}/Hospital/background/day/limit",
-            "skip":false,
+            "skip":true,
             "annotation":"中医馆管理后台-修改限额" 
         },
         {
@@ -251,6 +251,12 @@
             "api":"/api/v{version}/Account/Balance",
             "skip":true,
             "annotation":"获取当前用户帐户余额" 
+        },
+        {
+            "casename":"MyLines",
+            "api":"/api/v{version}/Account/MyLines",
+            "skip":true,
+            "annotation":"获取当前用户帐户流水" 
         }
     ]
 }

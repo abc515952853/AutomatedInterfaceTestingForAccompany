@@ -49,7 +49,7 @@ class Common(unittest.TestCase):
             #处理sql语句
             if data['模块'] == 'sql':
                 sqlarr = []
-                sqlarr.append(data['请求API'])
+                sqlarr = data['请求API'].split(';')
                 self.readdbhandle.modify_data(sqlarr)
                 continue
             #请求接口url处理

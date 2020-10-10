@@ -15,7 +15,16 @@ class DisposeAssert(unittest.TestCase):
                 self.assertIsNotNone(default)
                 self.assertEqual(expectedreport[c],default)
         elif type(expectedreport) is list:
-            self.assertListEqual(expectedreport,apireport)
+            # self.assertListEqual(expectedreport,apireport)
+            self.assertEqual(len(expectedreport),len(apireport))
+            for i in range(len(expectedreport)):
+                if type(expectedreport[i]) is dict:
+                    for c in expectedreport[i].keys():
+                        default = self.dict_get(apireport[i],c,None)
+                        self.assertIsNotNone(default)
+                        self.assertEqual(expectedreport[i][c],default)
+                else:
+                    self.assertEqual(expectedreport[i],apireport[i])
             
     def dict_get(self,dict, objkey, default):
         tmp = dict
