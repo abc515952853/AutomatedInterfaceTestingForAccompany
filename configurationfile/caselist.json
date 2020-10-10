@@ -9,7 +9,7 @@
         {
             "casename":"Send",
             "api":"/api/v{version}/SMS/Send",
-            "skip":false,
+            "skip":true,
             "annotation":"获取验证码"
         },
         {
@@ -261,8 +261,14 @@
         {
             "casename":"UserAccount",
             "api":"/api/v{version}/User/Account",
-            "skip":true,
+            "skip":false,
             "annotation":"提现账号" 
+        },
+        {
+            "casename":"Withdraw",
+            "api":"/api/v{version}/Withdraw",
+            "skip":true,
+            "annotation":"提现" 
         }
     ]
 }

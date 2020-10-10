@@ -6,10 +6,10 @@ from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,Di
 import os
 import time
 
-case_name = "Send"
+case_name = "Withdraw"
 
 @ddt.ddt
-class Send(unittest.TestCase):
+class Withdraw(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -34,7 +34,7 @@ class Send(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_Send(self,data):
+    def test_Withdraw(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
         #测试环境处理
@@ -49,7 +49,6 @@ class Send(unittest.TestCase):
         method = data['请求类型']
         #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
-        print(r.text)
         #获取预期结果数据
         expectedreport = self.disposereporthandle.get_report(data)
         #断言
@@ -72,15 +71,3 @@ class Send(unittest.TestCase):
         finally:
             #保存依赖数据
             self.disposerelyhandle.set_rely(data,r)
-            
-
-        
-        
-
-
-
-
-
-
-        
-        

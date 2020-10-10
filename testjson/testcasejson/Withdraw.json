@@ -1,0 +1,32 @@
+{
+    "case_withdraw_001":{
+        "name": "代理17",
+        "accountName": "杭州银行",
+        "subbranch": "滨江支行",
+        "accountNumber": "123456789012345",
+        "money": 100,
+        "realMoney": 94,
+        "userId": "bf66e4ac-4bb9-11e9-904d-f07959ddf195",
+        "password": "Pass123$"
+    },
+    "case_withdraw_002":{
+        "name": "代理17",
+        "accountName": "杭州银行",
+        "subbranch": "滨江支行",
+        "accountNumber": "123456789012345",
+        "money": 100,
+        "realMoney": 94,
+        "userId": "bf66e4ac-4bb9-11e9-904d-f07959ddf195",
+        "password": "Pass123$"
+    },
+    "case_withdraw_003":{
+        "name": "代理17",
+        "accountName": "杭州银行",
+        "subbranch": "滨江支行",
+        "accountNumber": "123456789012345",
+        "money": 200,
+        "realMoney": 188,
+        "userId": "bf66e4ac-4bb9-11e9-904d-f07959ddf195",
+        "password": "Pass123$"
+    }
+}

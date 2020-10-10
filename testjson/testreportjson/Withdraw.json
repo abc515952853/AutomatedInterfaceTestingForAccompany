@@ -1,0 +1,9 @@
+{
+    "case_withdraw_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT 200 as code"
+        }
+    }
+}
