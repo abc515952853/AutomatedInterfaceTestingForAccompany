@@ -1,0 +1,9 @@
+{
+    "case_useraccount_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.name,money_in-money_out as balance,100.0 as minMoney from account a   JOIN accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber ='11400010020';"
+        }
+    }
+}

@@ -45,8 +45,6 @@ class NetworkApi {
   /// 获取当前用户帐户余额(所有人)-----------------------------------------------------------------------------------pass
   static final String accountBalance = apiFix + "/Account/Balance";
 
-
-
   /// 获取当前用户帐户流水(所有人)-----------------------------------------------------------------------------------pass
   static final String accountMyLines = apiFix + "/Account/MyLines";
 
