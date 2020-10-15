@@ -100,7 +100,7 @@ class NetworkApi {
   /// 获取用户信息----------------------------------------------------------------------------------------pass
   static final String userMy = apiFix + "/User/My";
 
-  /// 修改头像
+  /// 修改头像----------------------------------------------------------------------------------------pass
   static final String userAvatar = apiFix + "/User/Avatar";
 
   /// post 修改昵称和区域

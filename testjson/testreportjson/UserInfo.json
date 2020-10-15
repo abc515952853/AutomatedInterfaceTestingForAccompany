@@ -1,0 +1,100 @@
+{
+    "case_userinfo_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010011';"
+        }
+    },
+    "case_userinfo_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010011'"
+        }
+    },
+    "case_userinfo_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010012';"
+        }
+    },
+    "case_userinfo_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010012'"
+        }
+    },
+    "case_userinfo_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010013';"
+        }
+    },
+    "case_userinfo_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010013'"
+        }
+    },
+    "case_userinfo_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010014';"
+        }
+    },
+    "case_userinfo_008":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010014'"
+        }
+    },
+    "case_userinfo_009":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010015';"
+        }
+    },
+    "case_userinfo_010":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010015'"
+        }
+    },
+    "case_userinfo_011":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010016';"
+        }
+    },
+    "case_userinfo_012":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010016'"
+        }
+    },
+    "case_userinfo_013":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT petName from accompanying_identity.aspnetusers where PhoneNumber ='11400010017';"
+        }
+    },
+    "case_userinfo_014":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT province,city from accompanying_identity.aspnetusers where PhoneNumber ='11400010017'"
+        }
+    }
+}
