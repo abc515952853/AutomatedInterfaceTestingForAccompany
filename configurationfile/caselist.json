@@ -19,6 +19,12 @@
             "annotation":"登录"
         },
         {
+            "casename":"UserMy",
+            "api":"/api/v{version}/User/My",
+            "skip":true,
+            "annotation":"获取用户信息"
+        },
+        {
             "casename":"JiguangToken",
             "api":"/api/v{version}/Jiguang/Token",
             "skip":false,
@@ -99,7 +105,7 @@
         {
             "casename":"DiseaseTypeId",
             "api":"/api/v{version}/Public/disease/{diseaseTypeId}",
-            "skip":true,
+            "skip":false,
             "annotation":"根据病种类型查询病种列表"
         },
         {

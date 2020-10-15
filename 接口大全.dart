@@ -81,7 +81,7 @@ class NetworkApi {
   /// 根据病种类型查询病种列表 xxx/1---------------------------------------------------------------------------------pass
   static String publicDiseaseId(int diseaseTypeId) => apiFix + "/Public/disease/$diseaseTypeId";
 
-  /// 根据类型获取商品 未使用
+  /// 根据类型获取商品 未使用---------------------------------------------------------------------------------none
   static final String productType = apiFix + "/Product/type";
 
   /// 根据商品编号获取商品 code DL000003

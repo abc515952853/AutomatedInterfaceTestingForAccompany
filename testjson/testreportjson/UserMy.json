@@ -1,0 +1,51 @@
+{
+    "case_usermy_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010011';"
+        }
+    },
+    "case_usermy_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010012';"
+        }
+    },
+    "case_usermy_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010013';"
+        }
+    },
+    "case_usermy_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010014';"
+        }
+    },
+    "case_usermy_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010015';"
+        }
+    },
+    "case_usermy_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010016';"
+        }
+    },
+    "case_usermy_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT id as userId,CertificateState as certificateState,UserGrade as userGrade,PetName as name,avatar,province,city,PhoneNumber as phone,vitae from accompanying_identity.aspnetusers where PhoneNumber ='11400010017';"
+        }
+    }
+}
