@@ -9,7 +9,7 @@
         {
             "casename":"Send",
             "api":"/api/v{version}/SMS/Send",
-            "skip":true,
+            "skip":false,
             "annotation":"获取验证码"
         },
         {
@@ -17,6 +17,12 @@
             "api":"/connect/token",
             "skip":false,
             "annotation":"登录"
+        },
+        {
+            "casename":"JiguangToken",
+            "api":"/api/v{version}/Jiguang/Token",
+            "skip":true,
+            "annotation":"极光推送修改"
         },
         {
             "casename":"Home",
@@ -267,7 +273,7 @@
         {
             "casename":"Withdraw",
             "api":"/api/v{version}/Withdraw",
-            "skip":true,
+            "skip":false,
             "annotation":"提现" 
         }
     ]

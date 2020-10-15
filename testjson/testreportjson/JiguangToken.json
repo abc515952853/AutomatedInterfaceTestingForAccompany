@@ -1,0 +1,14 @@
+{
+    "case_jiguangtoken_001":{
+        "status_code":200,
+        "expectedother":{
+            "status": true
+        }
+    },
+    "case_jiguangtoken_002":{
+        "status_code":200,
+        "expectedother":{
+            "status": true
+        }
+    }
+}

@@ -5,5 +5,19 @@
             "type":"ONE",
             "sql":"SELECT 200 as code"
         }
+    },
+    "case_withdraw_002":{
+        "status_code":400,
+        "expectedother":{
+            "error": "余额不足"
+        }
+    },
+    "case_withdraw_003":{
+        "status_code":400,
+        "expectedother":{
+            "error": "余额不足"
+        }
     }
 }
+
+
