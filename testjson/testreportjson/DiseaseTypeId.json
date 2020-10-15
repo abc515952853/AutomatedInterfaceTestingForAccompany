@@ -1,0 +1,58 @@
+{
+    "case_diseasetypeid_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=1 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=2 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=3 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=4 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=5 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=6 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=7 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    },
+    "case_diseasetypeid_008":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT disease_id as diseaseId,disease_name as diseaseName from disease where disease_type_id=8 ORDER BY disease_id desc LIMIT 0,20"
+        }
+    }
+}

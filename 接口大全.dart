@@ -11,7 +11,7 @@ class NetworkApi {
   /// 获取Token------------------------------------------------------------------------------------pass
   static final String connectToken = "/connect/token";
 
-  /// get 获取用户信息
+  /// get 获取用户信息------------------------------------------------------------------------------------none
   static final String userProfile = apiFix + "/User/Profile";
 
 // ———————————————————————————————————————————————————————————————
@@ -61,7 +61,7 @@ class NetworkApi {
   /// post 更新友盟 token
   static final String userUmengToken = apiFix + "/User/UmengToken";
 
-  /// post 更新极光 token
+  /// post 更新极光 token-----------------------------------------------------------------------------------pass
   static final String userJPush = apiFix + "/Jiguang/Token";
 
   /// get 获取版本更新策略-----------------------------------------------------------------------------------pass
@@ -78,7 +78,7 @@ class NetworkApi {
   /// 检索病种列表---------------------------------------------------------------------------------pass
   static final String publicDisease = apiFix + "/Public/disease";
 
-  /// 根据病种类型查询病种列表 xxx/1
+  /// 根据病种类型查询病种列表 xxx/1---------------------------------------------------------------------------------pass
   static String publicDiseaseId(int diseaseTypeId) => apiFix + "/Public/disease/$diseaseTypeId";
 
   /// 根据类型获取商品 未使用

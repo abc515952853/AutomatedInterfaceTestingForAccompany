@@ -21,12 +21,18 @@
         {
             "casename":"JiguangToken",
             "api":"/api/v{version}/Jiguang/Token",
-            "skip":true,
+            "skip":false,
             "annotation":"极光推送修改"
         },
         {
+            "casename":"UserProfile",
+            "api":"/api/v{version}/User/Profile",
+            "skip":false,
+            "annotation":"获取用户信息"
+        },
+        {
             "casename":"Home",
-            "api":"/api/v{version}/Home",
+            "api":"/api/v{version}/User/Profile",
             "skip":false,
             "annotation":"首页"
         },
@@ -89,6 +95,12 @@
             "api":"/api/v{version}/Public/diseaseType",
             "skip":false,
             "annotation":"病种类型"
+        },
+        {
+            "casename":"DiseaseTypeId",
+            "api":"/api/v{version}/Public/disease/{diseaseTypeId}",
+            "skip":true,
+            "annotation":"根据病种类型查询病种列表"
         },
         {
             "casename":"Disease",
