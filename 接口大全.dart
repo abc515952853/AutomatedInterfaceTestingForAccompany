@@ -97,7 +97,7 @@ class NetworkApi {
   /// 提交认证审核----------------------------------------------------------------------------------------pass
   static final String certification = apiFix + "/Certification";
 
-  /// 获取用户信息
+  /// 获取用户信息----------------------------------------------------------------------------------------pass
   static final String userMy = apiFix + "/User/My";
 
   /// 修改头像

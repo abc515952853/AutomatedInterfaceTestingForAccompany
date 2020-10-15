@@ -1,0 +1,51 @@
+{
+    "case_useravatar_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010011';"
+        }
+    },
+    "case_useravatar_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010012';"
+        }
+    },
+    "case_useravatar_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010013';"
+        }
+    },
+    "case_useravatar_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010014';"
+        }
+    },
+    "case_useravatar_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010015';"
+        }
+    },
+    "case_useravatar_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010016';"
+        }
+    },
+    "case_useravatar_007":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT avatar  from accompanying_identity.aspnetusers where PhoneNumber ='11400010017';"
+        }
+    }
+}

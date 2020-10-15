@@ -21,8 +21,14 @@
         {
             "casename":"UserMy",
             "api":"/api/v{version}/User/My",
-            "skip":true,
+            "skip":false,
             "annotation":"获取用户信息"
+        },
+        {
+            "casename":"UserAvatar",
+            "api":"/api/v{version}/User/Avatar",
+            "skip":true,
+            "annotation":"修改头像"
         },
         {
             "casename":"JiguangToken",
