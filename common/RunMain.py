@@ -46,6 +46,20 @@ class RunMethod:
 			return res
 		except Exception as ex_results:
 			print("程序终止,抓了一个异常：",ex_results,)
+	
+	def delete_main(self,url,data,header=None):
+		res = None
+		try:
+			if header !=None:
+				if header['Content-Type'] =='application/x-www-form-urlencoded':
+					res = requests.delete(url=url,data=data,headers=header)
+				else:
+					res = requests.delete(url=url,data=json.dumps(data),headers=header)
+			else:
+				res = requests.delete(url=url,data=json.dumps(data))
+			return res
+		except Exception as ex_results:
+			print("程序终止,抓了一个异常：",ex_results,)
 
 	def run_main(self,url,method,header=None,data=None):
 		res = None
@@ -55,6 +69,8 @@ class RunMethod:
 			res = self.get_main(url,data,header)
 		elif method == 'PUT':
 			res = self.put_main(url,data,header)
+		else:
+			res = self.delete_main(url,data,header)
 		return res
 
     

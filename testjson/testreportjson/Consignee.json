@@ -1,0 +1,44 @@
+{
+    "case_consignee_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.name,a.phone,a.province,a.city,a.county,a.street,a.is_default from accompanying_identity.consignee a join  accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber='11400010011' ORDER BY consignee_id desc"
+        }
+    },
+    "case_consignee_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.name,a.phone,a.province,a.city,a.county,a.street,a.is_default from accompanying_identity.consignee a join  accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber='11400010011' ORDER BY consignee_id desc"
+        }
+    },
+    "case_consignee_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.name,a.phone,a.province,a.city,a.county,a.street,a.is_default from accompanying_identity.consignee a join  accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber='11400010011' ORDER BY consignee_id desc"
+        }
+    },
+    "case_consignee_004":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.is_default from accompanying_identity.consignee a join  accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber='11400010011' ORDER BY consignee_id desc"
+        }
+    },
+    "case_consignee_005":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT a.consignee_id as consigneeId,a.name,a.phone,a.province,a.city,a.county,a.street,a.is_default as isDefault from accompanying_identity.consignee a join  accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber='11400010011' ORDER BY consignee_id asc"
+        }
+    },
+    "case_consignee_006":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.* from accompanying_identity.consignee a join  accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber='11400010011' ORDER BY consignee_id desc limit 1,2"
+        }
+    }
+}

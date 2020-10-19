@@ -33,7 +33,7 @@
         {
             "casename":"UserInfo",
             "api":"/api/v{version}/User/Info",
-            "skip":true,
+            "skip":false,
             "annotation":"修改地区和昵称"
         },
         {
@@ -304,6 +304,12 @@
             "casename":"Withdraw",
             "api":"/api/v{version}/Withdraw",
             "skip":false,
+            "annotation":"提现" 
+        },
+        {
+            "casename":"Consignee",
+            "api":"/api/v{version}/Consignee",
+            "skip":true,
             "annotation":"提现" 
         }
     ]

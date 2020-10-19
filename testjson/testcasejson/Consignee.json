@@ -1,0 +1,35 @@
+{
+    "case_consignee_001":{
+        "name": "斌11",
+        "phone": "11400010011",
+        "province": "浙江省",
+        "city": "杭州市",
+        "county": "上城区",
+        "street": "我是一个详细地址",
+        "is_default":1
+    },
+    "case_consignee_002":{
+        "name": "斌1111",
+        "phone": "11411111111",
+        "province": "湖北省",
+        "city": "武汉市",
+        "county": "江岸区",
+        "street": "我是一个详细地址",
+        "consigneeId": 0,
+        "is_default":1
+    },
+    "case_consignee_003":{
+        "name": "斌11",
+        "phone": "11400010011",
+        "province": "浙江省",
+        "city": "杭州市",
+        "county": "上城区",
+        "street": "我是一个详细地址",
+        "is_default":0
+    },
+    "case_consignee_004":{
+        "is_default":1
+    },
+    "case_consignee_006":{
+    }
+}

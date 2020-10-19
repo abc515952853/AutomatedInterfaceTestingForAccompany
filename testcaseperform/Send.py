@@ -36,7 +36,7 @@ class Send(unittest.TestCase):
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
     def test_Send(self,data):
         #测试报告用于说明
-        print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
+        print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称']+",用例接口:"+data["请求API"])
         #测试环境处理
         self.disposeenvhandle.set_env(data)
         #请求接口url处理

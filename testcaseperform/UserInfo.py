@@ -36,7 +36,7 @@ class UserInfo(unittest.TestCase):
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
     def test_UserInfo(self,data):
         #测试报告用于说明
-        print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
+        print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称']+",用例接口:"+data["请求API"])
         #测试环境处理
         self.disposeenvhandle.set_env(data)
         #请求接口url处理
@@ -49,25 +49,27 @@ class UserInfo(unittest.TestCase):
         method = data['请求类型']
         #请求接口
         r = self.runmethodhandle.run_main(url,method,header,payload)
-        #获取预期结果数据
-        expectedreport = self.disposereporthandle.get_report(data)
-        #断言
-        try: 
-            #返回状态断言
-            self.assertEqual(expectedreport['status_code'],r.status_code)
-            if r.status_code == 200:
-                #数据断言
-                if "expecteddata" in expectedreport:
-                    if r.text != '':
-                        self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
-                    else:
-                        self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],payload)
-            elif r.status_code == 400:
-                if "expecteddata" in expectedreport:
-                    self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
-        except AssertionError as e:
-            print(e)
-            raise
-        finally:
-            #保存依赖数据
-            self.disposerelyhandle.set_rely(data,r)
+
+        print(r.status_code,r.text)
+        # #获取预期结果数据
+        # expectedreport = self.disposereporthandle.get_report(data)
+        # #断言
+        # try: 
+        #     #返回状态断言
+        #     self.assertEqual(expectedreport['status_code'],r.status_code)
+        #     if r.status_code == 200:
+        #         #数据断言
+        #         if "expecteddata" in expectedreport:
+        #             if r.text != '':
+        #                 self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
+        #             else:
+        #                 self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],payload)
+        #     elif r.status_code == 400:
+        #         if "expecteddata" in expectedreport:
+        #             self.disposeasserthandle.AssertReport(expectedreport['expecteddata'],eval(r.text.replace('false', 'False').replace('true', 'True').replace('null','""')))
+        # except AssertionError as e:
+        #     print(e)
+        #     raise
+        # finally:
+        #     #保存依赖数据
+        #     self.disposerelyhandle.set_rely(data,r)

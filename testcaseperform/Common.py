@@ -45,7 +45,7 @@ class Common(unittest.TestCase):
         case = DisposeCase.DisposeCase(case_name).get_case_data()
         for data in case:
             time.sleep(2)
-            print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称'])
+            print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称']+",用例接口:"+data["请求API"])
             #处理sql语句
             if data['模块'] == 'sql':
                 sqlarr = []

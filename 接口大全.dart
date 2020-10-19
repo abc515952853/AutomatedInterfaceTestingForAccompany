@@ -103,19 +103,19 @@ class NetworkApi {
   /// 修改头像----------------------------------------------------------------------------------------pass
   static final String userAvatar = apiFix + "/User/Avatar";
 
-  /// post 修改昵称和区域
+  /// post 修改昵称和区域----------------------------------------------------------------------------------------pass
   static final String userInfo = apiFix + "/User/Info";
 
-  /// 添加收货地址Post/修改收货地址PUT
+  /// 添加收货地址Post/修改收货地址PUT----------------------------------------------------------------------------------------pass
   static final String consignee = apiFix + "/Consignee";
 
-  /// 设置为默认地址 {地址ID}
+  /// 设置为默认地址 {地址ID}----------------------------------------------------------------------------------------pass
   static String consigneeIdDefault(String id) => apiFix + "/Consignee/$id/Default";
 
-  /// DELETE 删除地址 {地址ID}
+  /// DELETE 删除地址 {地址ID}----------------------------------------------------------------------------------------pass
   static String consigneeId(String id) => apiFix + "/Consignee/$id";
 
-  /// 地址列表
+  /// 地址列表----------------------------------------------------------------------------------------pass
   static final String consigneeMy = apiFix + "/Consignee/My";
 
   /// 我的邀请
