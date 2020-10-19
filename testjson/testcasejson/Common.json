@@ -396,5 +396,45 @@
         "client_secret":"2e410faa120546b1922d36379bde2c8d",
         "phone_number":"11400010000",
         "verification_token":"320098"
+    },
+    "case_common_048":{
+        "phone": "11400010025",
+        "petName": "用户25",
+        "userGrade": 0,
+        "referrerPhone": "11400010017"
+    },
+    "case_common_049":{
+        "phone": "11400010026",
+        "petName": "患者26",
+        "userGrade": 1,
+        "referrerPhone": "11400010017",
+        "patient":{
+            "name":"患者26",
+            "relationship":"本人",
+            "diseases":"骨癌"
+
+        }
+    },
+    "case_common_050":{
+        "phone": "11400010027",
+        "petName": "患家27",
+        "userGrade": 2,
+        "referrerPhone": "11400010017",
+        "patient":{
+            "name":"爸爸27",
+            "relationship":"父子",
+            "diseases":"骨癌"
+
+        }
+    },
+    "case_common_051":{
+        "addTotal": 100,
+        "couponId": 11,
+        "phone": "11400010017"
+    },
+    "case_common_052":{
+        "addTotal": 100,
+        "couponId": 13,
+        "phone": "11400010017"
     }
 }

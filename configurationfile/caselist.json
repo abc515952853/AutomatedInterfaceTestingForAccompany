@@ -315,8 +315,14 @@
         {
             "casename":"InvitationMy",
             "api":"/api/v{version}/Invitation/My",
-            "skip":true,
+            "skip":false,
             "annotation":"我的邀请" 
+        },
+        {
+            "casename":"UserClient",
+            "api":"/api/v{version}}/User/Client",
+            "skip":true,
+            "annotation":"客户列表" 
         }
     ]
 }

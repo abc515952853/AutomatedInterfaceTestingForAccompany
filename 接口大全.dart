@@ -118,7 +118,7 @@ class NetworkApi {
   /// 地址列表----------------------------------------------------------------------------------------pass
   static final String consigneeMy = apiFix + "/Consignee/My";
 
-  /// 我的邀请
+  /// 我的邀请----------------------------------------------------------------------------------------pass
   static final String invitationMy = apiFix + "/Invitation/My";
 
   /// 派发

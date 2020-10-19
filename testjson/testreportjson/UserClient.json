@@ -1,0 +1,9 @@
+{
+    "case_userclient_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT schedule_disease as scheduleDisease,user_id as id,pet_name as petName,avatar,phone,diseases,try_eat_state as tryEatState,buy_state as buyState,agent_offer_state as agentOfferState  from accompanying_identity.salesman_client where referrer_id = (SELECT id from accompanying_identity.aspnetusers where PhoneNumber = '11400010017') ORDER BY create_time desc"
+        }
+    }
+}
