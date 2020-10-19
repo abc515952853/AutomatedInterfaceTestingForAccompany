@@ -309,8 +309,14 @@
         {
             "casename":"Consignee",
             "api":"/api/v{version}/Consignee",
+            "skip":false,
+            "annotation":"收货地址" 
+        },
+        {
+            "casename":"InvitationMy",
+            "api":"/api/v{version}/Invitation/My",
             "skip":true,
-            "annotation":"提现" 
+            "annotation":"我的邀请" 
         }
     ]
 }

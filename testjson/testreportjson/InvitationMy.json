@@ -1,0 +1,9 @@
+{
+    "case_invitationmy_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ALL",
+            "sql":"SELECT name as petName,avatar,state from accompanying_identity.invitation where referrer_id = (SELECT id from accompanying_identity.aspnetusers where PhoneNumber  = '11400010017') and state != 0 ORDER BY create_time desc"
+        }
+    }
+}
