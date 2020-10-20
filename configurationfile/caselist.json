@@ -321,8 +321,14 @@
         {
             "casename":"UserClient",
             "api":"/api/v{version}}/User/Client",
-            "skip":true,
+            "skip":false,
             "annotation":"客户列表" 
+        },
+        {
+            "casename":"UserSend",
+            "api":"/api/v{version}/User/{id}/Send",
+            "skip":true,
+            "annotation":"派发试吃" 
         }
     ]
 }

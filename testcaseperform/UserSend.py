@@ -6,10 +6,10 @@ from common import DisposeCase,DisposeApi,DisposeHeader,DisposeReport,RunMain,Di
 import os
 import time
 
-case_name = "UserClient"
+case_name = "UserSend"
 
 @ddt.ddt
-class UserClient(unittest.TestCase):
+class UserSend(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.runmethodhandle = RunMain.RunMethod()
@@ -34,7 +34,7 @@ class UserClient(unittest.TestCase):
 
     #数据驱动执行字段'是否执行'为是的用例
     @ddt.data(*DisposeCase.DisposeCase(case_name).get_case_data())
-    def test_UserClient(self,data):
+    def test_UserSend(self,data):
         #测试报告用于说明
         print("正在执行用例:"+data['用例号']+",用例名称:"+data['用例名称']+",用例接口:"+data["请求API"])
         #测试环境处理

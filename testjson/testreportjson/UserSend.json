@@ -1,0 +1,14 @@
+{
+    "case_usersend_001":{
+        "status_code":400,
+        "expectedother":{
+            "error": "桑黄试吃活动调整,暂停派发。"
+        }
+    },
+    "case_usersend_002":{
+        "status_code":400,
+        "expectedother":{
+            "error": "桑黄试吃活动调整,暂停派发。"
+        }
+    }
+}
