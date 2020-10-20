@@ -327,8 +327,14 @@
         {
             "casename":"UserSend",
             "api":"/api/v{version}/User/{id}/Send",
-            "skip":true,
+            "skip":false,
             "annotation":"派发试吃" 
+        },
+        {
+            "casename":"UserInvitation",
+            "api":"/api/v{version}/User/Invitation",
+            "skip":true,
+            "annotation":"代理邀约" 
         }
     ]
 }

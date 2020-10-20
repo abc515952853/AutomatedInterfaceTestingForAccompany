@@ -1,0 +1,23 @@
+{
+    "case_userinvitation_001":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.group_id,a.notice_type,a.is_browse,a.state from notice a join accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber = '11400010025' ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_userinvitation_002":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.group_id,a.notice_type,a.is_browse,a.state from notice a join accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber = '11400010025' ORDER BY create_time desc LIMIT 0,1"
+        }
+    },
+    "case_userinvitation_003":{
+        "status_code":200,
+        "expected":{
+            "type":"ONE",
+            "sql":"SELECT a.group_id,a.notice_type,a.is_browse,a.state from notice a join accompanying_identity.aspnetusers b on a.user_id = b.id where b.PhoneNumber = '11400010025' ORDER BY create_time desc LIMIT 0,1"
+        }
+    }
+}

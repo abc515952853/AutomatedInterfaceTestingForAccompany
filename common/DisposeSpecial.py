@@ -120,6 +120,11 @@ class DisposeSpecial:
             elif data['businessType'] ==999:
                 data['type'] = "订单消费"                   
         return expectedreport
+
+    def UserInvitationSpecial(self,expectedreport):
+        print(expectedreport)
+        return expectedreport
+
     
         
         

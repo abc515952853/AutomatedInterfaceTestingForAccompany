@@ -1,0 +1,24 @@
+{
+    "case_userinvitation_001":{
+        "clientId": "string",
+        "group_id":1,
+        "notice_type":11,
+        "is_browse":0,
+        "state":0
+
+    },
+    "case_userinvitation_002":{
+        "clientId": "string",
+        "group_id":1,
+        "notice_type":11,
+        "is_browse":0,
+        "state":0
+    },
+    "case_userinvitation_003":{
+        "clientId": "string",
+        "group_id":1,
+        "notice_type":11,
+        "is_browse":0,
+        "state":0
+    }
+}
